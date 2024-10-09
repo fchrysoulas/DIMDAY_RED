@@ -349,7 +349,7 @@ Hooks.once("ready", async function() {
   CONFIG.DW.nightmode = game.settings.get('dimdayred', 'nightmode') ?? false;
 
   // Handle sockets.
-  game.socket.on('system.dungeonworld', (data) => {
+  game.socket.on('system.dimdayred', (data) => {
     if (!game.user.isGM) {
       return;
     }
@@ -384,12 +384,12 @@ Hooks.on('createChatMessage', async (message, options, id) => {
     if (r) {
       r.render().then(rTemplate => {
         // Render the damage buttons.
-        renderTemplate(`systems/dungeonworld/templates/parts/chat-buttons.html`, {}).then(buttonTemplate => {
-          if (message?.flags?.dungeonworld?.damageButtons) return;
+        renderTemplate(`systems/dimdayred/templates/parts/chat-buttons.html`, {}).then(buttonTemplate => {
+          if (message?.flags?.dimdayred?.damageButtons) return;
           // Update the chat message with the appended buttons.
           message.update({
             content: rTemplate + buttonTemplate,
-            'flags.dungeonworld.damageButtons': true,
+            'flags.dimdayred.damageButtons': true,
           })
           // Update the chat log scroll position.
             .then(m => {
@@ -450,7 +450,7 @@ Hooks.on('createActor', async (actor, options, id) => {
 
   if (actor.type == 'character') {
     // Allow the character to levelup up when their level changes.
-    await actor.setFlag('dungeonworld', 'levelup', true);
+    await actor.setFlag('dimdayred', 'levelup', true);
 
     // Get the item moves as the priority.
     let moves = game.items.filter(i => i.type == 'move' && (i.system.moveType == 'basic' || i.system.moveType == 'special'));
@@ -542,7 +542,7 @@ Hooks.on('preUpdateActor', (actor, updateData, options, id) => {
     // Allow the character to levelup up when their level changes.
     if (updateData.system && updateData.system.attributes && updateData.system.attributes.level) {
       if (updateData.system.attributes.level.value > actor.system.attributes.level.value) {
-        actor.setFlag('dungeonworld', 'levelup', true);
+        actor.setFlag('dimdayred', 'levelup', true);
       }
     }
   }
@@ -588,7 +588,7 @@ Hooks.on('renderDialog', (dialog, html, options) => {
         $self.find('option').each((opt_index, opt_item) => {
           let $opt = $(opt_item);
           let val = parseInt($opt.attr('value'));
-          const noAbilityScores = game.settings.get('dungeonworld', 'noAbilityScores');
+          const noAbilityScores = game.settings.get('dimdayred', 'noAbilityScores');
           if (!isNaN(val)) {
             if (noAbilityScores) {
               const alreadySelected = scores.filter(v => v == val) || [];
@@ -633,7 +633,7 @@ async function createDwMacro(data, slot) {
 
   // Create the macro command
   // @todo refactor this to use uuids and folders.
-  const command = `game.dungeonworld.rollItemMacro("${item.name}");`;
+  const command = `game.dimdayred.rollItemMacro("${item.name}");`;
   let macro = game.macros.find(m => (m.name === item.name) && (m.command === command));
   if (!macro) {
     macro = await Macro.create({
@@ -642,8 +642,8 @@ async function createDwMacro(data, slot) {
       img: item.img,
       command: command,
       flags: {
-        "dungeonworld.itemMacro": true,
-        "dungeonworld.itemUuid": data.uuid
+        "dimdayred.itemMacro": true,
+        "dimdayred.itemUuid": data.uuid
       }
     });
   }

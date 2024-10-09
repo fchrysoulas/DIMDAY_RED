@@ -2,7 +2,7 @@ export const displayChatActionButtons = function(message, html, data) {
   const chatCard = html.find(".dw.chat-card");
 
   // Hide damage buttons if necessary.
-  if (!game.user.isGM || !game.settings.get('dungeonworld', 'enableDamageButtons')) {
+  if (!game.user.isGM || !game.settings.get('dimdayred', 'enableDamageButtons')) {
     html.find('.chat-damage-buttons').hide();
   }
 
@@ -98,7 +98,7 @@ async function _chatActionMarkXp(actor, message) {
     await message.update({'content': $content[0].outerHTML});
   }
   else {
-    game.socket.emit('system.dungeonworld', {
+    game.socket.emit('system.dimdayred', {
       message: message.id,
       content: $content[0].outerHTML
     });

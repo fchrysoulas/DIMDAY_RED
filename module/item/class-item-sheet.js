@@ -10,7 +10,7 @@ export class DwClassItemSheet extends DwItemSheet {
   /** @override */
   static get defaultOptions() {
     return mergeObject(super.defaultOptions, {
-      classes: ["dungeonworld", "sheet", "item", "class"],
+      classes: ["dimdayred", "sheet", "item", "class"],
       width: 960,
       height: 640,
       tabs: [{ navSelector: ".sheet-tabs", contentSelector: ".sheet-body", initial: "equipment" }],
@@ -22,7 +22,7 @@ export class DwClassItemSheet extends DwItemSheet {
 
   /** @override */
   get template() {
-    const path = "systems/dungeonworld/templates/items";
+    const path = "systems/dimdayred/templates/items";
     return `${path}/${this.item.type}-sheet.html`;
   }
 

@@ -17,7 +17,7 @@ export class DwItemSheet extends ItemSheet {
   /** @override */
   static get defaultOptions() {
     let options = mergeObject(super.defaultOptions, {
-      classes: ["dungeonworld", "sheet", "item"],
+      classes: ["dimdayred", "sheet", "item"],
       width: 520,
       height: 480,
       tabs: [{ navSelector: ".sheet-tabs", contentSelector: ".sheet-body", initial: "description" }],
@@ -35,7 +35,7 @@ export class DwItemSheet extends ItemSheet {
 
   /** @override */
   get template() {
-    const path = "systems/dungeonworld/templates/items";
+    const path = "systems/dimdayred/templates/items";
     return `${path}/${this.item.type}-sheet.html`;
   }
 
@@ -299,7 +299,7 @@ export class DwItemSheet extends ItemSheet {
       else if (field_type == 'equipment-groups') {
         const field_values = this.object.system.equipment;
         const nk = Object.keys(field_values).length + 1;
-        let template = '/systems/dungeonworld/templates/items/_class-sheet--equipment-group.html';
+        let template = '/systems/dimdayred/templates/items/_class-sheet--equipment-group.html';
         let templateData = {
           group: nk
         };

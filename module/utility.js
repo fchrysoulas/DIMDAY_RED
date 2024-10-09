@@ -21,8 +21,8 @@ export class DwUtility {
     }
 
     // Cache results.
-    if (game.dungeonworld.equipment && !update) {
-      return game.dungeonworld.equipment;
+    if (game.dimdayred.equipment && !update) {
+      return game.dimdayred.equipment;
     }
 
     // Load new results.
@@ -35,7 +35,7 @@ export class DwUtility {
       }
     }
 
-    game.dungeonworld.equipment = items;
+    game.dimdayred.equipment = items;
 
     return items;
   }
@@ -46,7 +46,7 @@ export class DwUtility {
   }
 
   static getAbilityMod(abilityScore, force=false) {
-    const noAbilityScores = game.settings.get('dungeonworld', 'noAbilityScores');
+    const noAbilityScores = game.settings.get('dimdayred', 'noAbilityScores');
     if (noAbilityScores && !force) {
       return abilityScore
     }
@@ -78,7 +78,7 @@ export class DwUtility {
   }
 
   static getAbilityScore(abilityMod, force=false) {
-    const noAbilityScores = game.settings.get('dungeonworld', 'noAbilityScores');
+    const noAbilityScores = game.settings.get('dimdayred', 'noAbilityScores');
     if (noAbilityScores && !force) {
       return abilityScore
     }
@@ -135,14 +135,14 @@ export class DwUtility {
 
     const compendium = []
 
-    const noCompendiumAutoData = game.settings.get('dungeonworld', 'noCompendiumAutoData');
+    const noCompendiumAutoData = game.settings.get('dimdayred', 'noCompendiumAutoData');
     if (!noCompendiumAutoData) {
-      const pack_id = `dungeonworld.${slug}`;
+      const pack_id = `dimdayred.${slug}`;
       const pack = game.packs.get(pack_id);
       compendium.push(...(pack ? await pack.getDocuments() : []));
     }
 
-    const compendiumPrefix = game.settings.get('dungeonworld', 'compendiumPrefix');
+    const compendiumPrefix = game.settings.get('dimdayred', 'compendiumPrefix');
     if (compendiumPrefix != '') {
       const pack_id = `${compendiumPrefix.toLowerCase()}-${slug}`;
       const pack = game.packs.find(p => {return p.metadata?.name?.indexOf(pack_id) >= 0});

@@ -26,12 +26,12 @@ export class ActorDw extends Actor {
     const data = actorData.system;
 
     let debilities = {
-      "str": game.settings.get('dungeonworld', 'debilityLabelSTR'),
-      "dex": game.settings.get('dungeonworld', 'debilityLabelDEX'),
-      "con": game.settings.get('dungeonworld', 'debilityLabelCON'),
-      "int": game.settings.get('dungeonworld', 'debilityLabelINT'),
-      "wis": game.settings.get('dungeonworld', 'debilityLabelWIS'),
-      "cha": game.settings.get('dungeonworld', 'debilityLabelCHA')
+      "str": game.settings.get('dimdayred', 'debilityLabelSTR'),
+      "dex": game.settings.get('dimdayred', 'debilityLabelDEX'),
+      "con": game.settings.get('dimdayred', 'debilityLabelCON'),
+      "int": game.settings.get('dimdayred', 'debilityLabelINT'),
+      "wis": game.settings.get('dimdayred', 'debilityLabelWIS'),
+      "cha": game.settings.get('dimdayred', 'debilityLabelCHA')
     }
 
     debilities = Object.entries(debilities).reduce((obj, e) => {
@@ -39,7 +39,7 @@ export class ActorDw extends Actor {
       return obj;
     }, {});
 
-    const noAbilityScores = game.settings.get('dungeonworld', 'noAbilityScores');
+    const noAbilityScores = game.settings.get('dimdayred', 'noAbilityScores');
 
     // Ability Scores
     for (let [a, abl] of Object.entries(data.abilities)) {
@@ -67,14 +67,14 @@ export class ActorDw extends Actor {
       abl.label = CONFIG.DW.abilities[a];
       abl.debilityLabel = debilities[a];
       // Adjust mod based on debility.
-      if (abl.debility && !game.settings.get("dungeonworld", "disDebility")) {
+      if (abl.debility && !game.settings.get("dimdayred", "disDebility")) {
         abl.mod -= 1;
       }
     }
 
     // Calculate weight.
     let coin = data.attributes.coin.value ?? 0;
-    let coinWeight = game.settings.get("dungeonworld", "coinWeight");
+    let coinWeight = game.settings.get("dimdayred", "coinWeight");
     let weight = coinWeight > 0 ? Math.floor(coin/coinWeight ) : 0;
     let items = actorData.items;
     if (items) {
@@ -123,13 +123,13 @@ export class ActorDw extends Actor {
     data.attributes.weight.value = weight;
 
     // Add base flags.
-    if (!actorData.flags.dungeonworld) actorData.flags.dungeonworld = {};
-    if (!actorData.flags.dungeonworld.sheetDisplay) actorData.flags.dungeonworld.sheetDisplay = {};
+    if (!actorData.flags.dimdayred) actorData.flags.dimdayred = {};
+    if (!actorData.flags.dimdayred.sheetDisplay) actorData.flags.dimdayred.sheetDisplay = {};
 
     // Handle max XP.
     let rollData = this.getRollData();
     if (!rollData.attributes.level.value) rollData.attributes.level.value = 1;
-    let xpRequiredFormula = game.settings.get('dungeonworld', 'xpFormula');
+    let xpRequiredFormula = game.settings.get('dimdayred', 'xpFormula');
     let xpRequired = parseInt(xpRequiredFormula)
     if (isNaN(xpRequired)) {
       // Evaluate the max XP roll.
@@ -140,8 +140,8 @@ export class ActorDw extends Actor {
     data.attributes.xp.max = xpRequired;
 
     // Handle roll mode flag.
-    if (actorData?.flags?.dungeonworld) {
-      if (!actorData.flags.dungeonworld.rollMode) actorData.flags.dungeonworld.rollMode = 'def';
+    if (actorData?.flags?.dimdayred) {
+      if (!actorData.flags.dimdayred.rollMode) actorData.flags.dimdayred.rollMode = 'def';
     }
   }
 
@@ -224,7 +224,7 @@ export class ActorDw extends Actor {
   rollMove(roll, actor, dataset, templateData, form = null, applyDamage = false) {
     let actorData = actor.system;
     // Render the roll.
-    let template = 'systems/dungeonworld/templates/chat/chat-move.html';
+    let template = 'systems/dimdayred/templates/chat/chat-move.html';
     // GM rolls.
     let chatData = {
       user: game.user.id,

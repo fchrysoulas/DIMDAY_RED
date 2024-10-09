@@ -57,7 +57,7 @@ export class DwRegisterHelpers {
     });
 
     Handlebars.registerHelper('localizeOverride', function(i18nKey, settingKey = false) {
-      let result = settingKey ? game.settings.get('dungeonworld', settingKey) : '';
+      let result = settingKey ? game.settings.get('dimdayred', settingKey) : '';
       if (typeof result === 'string' && result.length > 0) {
         return result;
       }

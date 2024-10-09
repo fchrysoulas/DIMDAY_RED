@@ -2,13 +2,13 @@ export class MigrateDw {
 
   static runMigration() {
     // Retrieve the version.
-    let version = game.settings.get('dungeonworld', 'systemMigrationVersion');
+    let version = game.settings.get('dimdayred', 'systemMigrationVersion');
 
     // Update 1: Assign basic/special moves on actors.
     if (version < 1) {
       this.updateSpecialMoves();
       version++;
-      game.settings.set('dungeonworld', 'systemMigrationVersion', version);
+      game.settings.set('dimdayred', 'systemMigrationVersion', version);
     }
   }
 

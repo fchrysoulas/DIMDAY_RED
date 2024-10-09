@@ -53,7 +53,7 @@ export class DwRolls {
     let data = {};
 
     let dlgOptions = {
-      classes: ['dungeonworld', 'dw-dialog']
+      classes: ['dimdayred', 'dw-dialog']
     };
 
     if (CONFIG.DW.nightmode) dlgOptions.classes.push('nightmode');
@@ -102,7 +102,7 @@ export class DwRolls {
         // If this is a PROMPT roll, render a different bond to let the user
         // enter their bond value.
         else if (data.roll == 'bond') {
-          let template = 'systems/dungeonworld/templates/chat/roll-dialog.html';
+          let template = 'systems/dimdayred/templates/chat/roll-dialog.html';
           let dialogData = {
             title: game.i18n.format('DW.Dialog.bondContent', {name: this.item.name}),
             bond: null
@@ -161,7 +161,7 @@ export class DwRolls {
 
   static async rollMoveExecute(roll, dataset, templateData, form = null) {
     // Render the roll.
-    let template = 'systems/dungeonworld/templates/chat/chat-move.html';
+    let template = 'systems/dimdayred/templates/chat/chat-move.html';
     let dice = DwUtility.getRollFormula('2d6');
     let forwardUsed = false;
     let rollModeUsed = false;
@@ -260,9 +260,9 @@ export class DwRolls {
         }
 
         // Handle adv/dis.
-        let rollMode = this.actor.flags?.dungeonworld?.rollMode ?? 'def';
+        let rollMode = this.actor.flags?.dimdayred?.rollMode ?? 'def';
         const debilityIsActive = this.actorData.abilities[roll] !== undefined ? this.actorData.abilities[roll].debility : false;
-        if (game.settings.get("dungeonworld", "disDebility") && debilityIsActive) {
+        if (game.settings.get("dimdayred", "disDebility") && debilityIsActive) {
           // If the roll had advantage, the debility disadvantage cancels it out,
           // otherwise the debility gives disadvantage
           if (rollMode === "adv") {
@@ -389,16 +389,16 @@ export class DwRolls {
     if (game.combat && game.combat.combatants) {
       let combatant = game.combat.combatants.find(c => c.actor.id == this.actor.id);
       if (combatant) {
-        let moveCount = combatant.flags.dungeonworld ? combatant.flags.dungeonworld.moveCount : 0;
+        let moveCount = combatant.flags.dimdayred ? combatant.flags.dimdayred.moveCount : 0;
         moveCount = moveCount ? Number(moveCount) + 1 : 1;
         // Emit a socket for the GM client.
         if (!game.user.isGM) {
-          game.socket.emit('system.dungeonworld', {
-            combatantUpdate: { _id: combatant.id, 'flags.dungeonworld.moveCount': moveCount }
+          game.socket.emit('system.dimdayred', {
+            combatantUpdate: { _id: combatant.id, 'flags.dimdayred.moveCount': moveCount }
           });
         }
         else {
-          await game.combat.updateEmbeddedDocuments('Combatant', [{ _id: combatant.id, 'flags.dungeonworld.moveCount': moveCount }]);
+          await game.combat.updateEmbeddedDocuments('Combatant', [{ _id: combatant.id, 'flags.dimdayred.moveCount': moveCount }]);
           ui.combat.render();
         }
       }
@@ -408,8 +408,8 @@ export class DwRolls {
     if (forwardUsed || rollModeUsed) {
       let updates = {};
       if (forwardUsed) updates['system.attributes.forward.value'] = 0;
-      if (rollModeUsed && game.settings.get('dungeonworld', 'advForward')) {
-        updates['flags.dungeonworld.rollMode'] = 'def';
+      if (rollModeUsed && game.settings.get('dimdayred', 'advForward')) {
+        updates['flags.dimdayred.rollMode'] = 'def';
       }
       await this.actor.update(updates);
     }

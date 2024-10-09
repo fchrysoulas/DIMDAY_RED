@@ -18,7 +18,7 @@ export class DwActorSheet extends ActorSheet {
   /** @override */
   static get defaultOptions() {
     let options = mergeObject(super.defaultOptions, {
-      classes: ["dungeonworld", "sheet", "actor"],
+      classes: ["dimdayred", "sheet", "actor"],
       width: 840,
       height: 780,
       tabs: [{ navSelector: ".sheet-tabs", contentSelector: ".sheet-body", initial: "moves" }]
@@ -35,7 +35,7 @@ export class DwActorSheet extends ActorSheet {
 
   /** @override */
   get template() {
-    const path = "systems/dungeonworld/templates/sheet";
+    const path = "systems/dimdayred/templates/sheet";
     return `${path}/${this.actor.type}-sheet.html`;
   }
 
@@ -166,10 +166,10 @@ export class DwActorSheet extends ActorSheet {
     };
 
     // Add item icon setting.
-    context.system.itemIcons = game.settings.get('dungeonworld', 'itemIcons');
+    context.system.itemIcons = game.settings.get('dimdayred', 'itemIcons');
 
     // Check if ability scores are disabled
-    context.system.noAbilityScores = game.settings.get('dungeonworld', 'noAbilityScores');
+    context.system.noAbilityScores = game.settings.get('dimdayred', 'noAbilityScores');
 
     // Return data to the sheet
     let returnData = {
@@ -531,7 +531,7 @@ export class DwActorSheet extends ActorSheet {
 
     // Get the original class name if this was a translation.
     if (game.babele) {
-      let babele_classes = game.babele.translations.find(p => p.collection == 'dungeonworld.classes');
+      let babele_classes = game.babele.translations.find(p => p.collection == 'dimdayred.classes');
       if (babele_classes) {
         let babele_pack = babele_classes.entries.find(p => p.name == char_class_name);
         if (babele_pack) {
@@ -601,7 +601,7 @@ export class DwActorSheet extends ActorSheet {
     }
 
     // Get ability scores.
-    const noAbilityScores = game.settings.get('dungeonworld', 'noAbilityScores');
+    const noAbilityScores = game.settings.get('dimdayred', 'noAbilityScores');
     let ability_scores = [16, 15, 13, 12, 9, 8];
     if (noAbilityScores) {
       ability_scores = [2, 1, 1, 0, 0, -1];
@@ -783,7 +783,7 @@ export class DwActorSheet extends ActorSheet {
     }
 
     // Build the content.
-    const template = 'systems/dungeonworld/templates/dialog/level-up.html';
+    const template = 'systems/dimdayred/templates/dialog/level-up.html';
     const templateData = {
       char_class: char_class,
       char_class_name: orig_class_name,
@@ -800,7 +800,7 @@ export class DwActorSheet extends ActorSheet {
       advanced_moves_6: advanced_moves_6.length > 0 ? advanced_moves_6 : null,
       cast_spells: cast_spells.length > 0 && spells.length > 0 ? true : false,
       spells: spells.length > 0 ? spells : null,
-      no_ability_increase: game.settings.get('dungeonworld', 'noAbilityIncrease'),
+      no_ability_increase: game.settings.get('dimdayred', 'noAbilityIncrease'),
     };
     const html = await renderTemplate(template, templateData);
 
@@ -817,7 +817,7 @@ export class DwActorSheet extends ActorSheet {
     const dlg_options = {
       width: 920,
       height: 640,
-      classes: ['dw-level-up', 'dungeonworld', 'sheet'],
+      classes: ['dw-level-up', 'dimdayred', 'sheet'],
       resizable: true
     };
 
@@ -982,7 +982,7 @@ export class DwActorSheet extends ActorSheet {
 
     // Adjust hp.
     if (itemData.class_item.system.hp) {
-      const noConstitutionToHP = game.settings.get('dungeonworld', 'noConstitutionToHP');
+      const noConstitutionToHP = game.settings.get('dimdayred', 'noConstitutionToHP');
       let constitution = 0;
       if (!noConstitutionToHP) {
         constitution = actor.system.abilities.con.value;
@@ -997,7 +997,7 @@ export class DwActorSheet extends ActorSheet {
 
     // Adjust load.
     if (itemData.class_item.system.load) {
-      const noSTRToMaxLoad = game.settings.get('dungeonworld', 'noSTRToMaxLoad');
+      const noSTRToMaxLoad = game.settings.get('dimdayred', 'noSTRToMaxLoad');
       if (noSTRToMaxLoad) {
         system['attributes.weight.max'] = Number(itemData.class_item.system.load)
       } else {
@@ -1025,7 +1025,7 @@ export class DwActorSheet extends ActorSheet {
     }
 
     await actor.update({ system: system });
-    await actor.setFlag('dungeonworld', 'levelup', false);
+    await actor.setFlag('dimdayred', 'levelup', false);
   }
 
   // @todo abstract the logic in this method so that we can combine it with onLevelUp as much as possible.
@@ -1043,7 +1043,7 @@ export class DwActorSheet extends ActorSheet {
 
     // Get the original class name if this was a translation.
     if (game.babele) {
-      let babele_classes = game.babele.translations.find(p => p.collection == 'dungeonworld.classes');
+      let babele_classes = game.babele.translations.find(p => p.collection == 'dimdayred.classes');
       if (babele_classes) {
         let babele_pack = babele_classes.entries.find(p => p.name == char_class_name);
         if (babele_pack) {
@@ -1106,7 +1106,7 @@ export class DwActorSheet extends ActorSheet {
       }
 
     // Get ability scores.
-    const noAbilityScores = game.settings.get('dungeonworld', 'noAbilityScores');
+    const noAbilityScores = game.settings.get('dimdayred', 'noAbilityScores');
     let ability_scores = [16, 15, 13, 12, 9, 8];
     if (noAbilityScores) {
       ability_scores = [2, 1, 1, 0, 0, -1];
@@ -1270,7 +1270,7 @@ export class DwActorSheet extends ActorSheet {
     }
 
     // Build the content.
-    const template = 'systems/dungeonworld/templates/dialog/class-viewer.html';
+    const template = 'systems/dimdayred/templates/dialog/class-viewer.html';
     const templateData = {
       char_class: char_class,
       char_class_name: orig_class_name,
@@ -1287,7 +1287,7 @@ export class DwActorSheet extends ActorSheet {
       advanced_moves_6: advanced_moves_6.length > 0 ? advanced_moves_6 : null,
       cast_spells: cast_spells.length > 0 && spells.length > 0 ? true : false,
       spells: spells.length > 0 ? spells : null,
-      no_ability_increase: game.settings.get('dungeonworld', 'noAbilityIncrease'),
+      no_ability_increase: game.settings.get('dimdayred', 'noAbilityIncrease'),
     };
     const html = await renderTemplate(template, templateData);
 
@@ -1304,7 +1304,7 @@ export class DwActorSheet extends ActorSheet {
     const dlg_options = {
       width: 920,
       height: 640,
-      classes: ['dw-level-up', 'dungeonworld', 'sheet'],
+      classes: ['dw-level-up', 'dimdayred', 'sheet'],
       resizable: true
     };
 
@@ -1476,7 +1476,7 @@ export class DwActorSheet extends ActorSheet {
 
     // Update flags.
     let closed = $look.hasClass('closed');
-    await this.actor.update({'flags.dungeonworld.sheetDisplay.sidebarClosed': closed});
+    await this.actor.update({'flags.dimdayred.sheetDisplay.sidebarClosed': closed});
   }
 
   /* -------------------------------------------- */

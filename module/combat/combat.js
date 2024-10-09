@@ -267,12 +267,12 @@ export class CombatSidebarDw {
         let moveTotal = 0;
         if (combatants.character) {
           combatants.character.forEach(c => {
-            moveTotal = c.flags.dungeonworld ? moveTotal + Number(c.flags.dungeonworld.moveCount) : moveTotal;
+            moveTotal = c.flags.dimdayred ? moveTotal + Number(c.flags.dimdayred.moveCount) : moveTotal;
           });
         }
 
         // Get the custom template.
-        let template = 'systems/dungeonworld/templates/combat/combat.html';
+        let template = 'systems/dimdayred/templates/combat/combat.html';
         let templateData = {
           combatants: combatants,
           moveTotal: moveTotal
