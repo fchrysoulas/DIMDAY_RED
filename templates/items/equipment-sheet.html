@@ -1,0 +1,85 @@
+<form class="{{cssClass}} item-form flexcol" autocomplete="off">
+  <div class="sheet-wrapper flexcol">
+    <header class="sheet-header flexrow">
+      <div class="cell cell--image">
+        <img class="profile-img" src="{{item.img}}" data-edit="img" title="{{item.name}}"/>
+      </div>
+      <div class="header-fields">
+          <h1 class="charname"><input name="name" type="text" value="{{item.name}}" placeholder="{{localize "DW.Common.Name"}}"/></h1>
+      </div>
+    </header>
+
+    {{!-- Sheet Tab Navigation --}}
+    <nav class="sheet-navigation sheet-tabs tabs" data-group="primary">
+        <a class="item" data-tab="description">{{localize "DW.Common.Description" }}</a>
+        <a class="item" data-tab="details">{{localize "DW.Common.Details" }}</a>
+    </nav>
+
+    {{!-- Sheet Body --}}
+    <section class="sheet-body">
+
+        {{!-- Description Tab --}}
+        <div class="tab" data-group="primary" data-tab="description">
+            {{editor system.descriptionEnriched target="system.description" button=true owner=owner editable=editable}}
+        </div>
+
+        {{!-- Details Tab --}}
+        <div class="tab" data-group="primary" data-tab="details">
+          <div class="resource">
+            <label for="tag" class="control-label">{{localize "DW.Tags"}}</label>
+            <div class="help-text"><p>{{localize "DW.TagsHelp" }}</p></div>
+            <input class='tags-input-source' placeholder='write some tags' value='{{ system.tags }}'/>
+          </div>
+          <div class="resource">
+            <label>{{localize "DW.Equipped"}}</label>
+            <input type="checkbox" name="system.equipped" {{checked system.equipped}}/>
+          </div>
+          <div class="resource">
+            <label>{{localize "DW.Quantity"}}</label>
+            <input type="text" name="system.quantity" value="{{system.quantity}}" data-dtype="Number"/>
+          </div>
+          <div class="resource">
+            <label>{{localize "DW.Uses"}}</label>
+            <input type="text" name="system.uses" value="{{system.uses}}" data-dtype="Number"/>
+          </div>
+          <div class="resource">
+            <label>{{localize "DW.Weight"}}</label>
+            <input type="text" name="system.weight" value="{{system.weight}}" data-dtype="Number"/>
+          </div>
+          <div class="resource">
+            <label>{{localize "DW.Price"}}</label>
+            <input type="text" name="system.price" value="{{system.price}}" data-dtype="Number"/>
+          </div>
+          {{#if (eq system.itemType "weapon")}}
+          <div class="resource">
+            <label>{{localize "DW.DamageOverride"}}</label>
+            <input type="text" name="system.rollFormula" value="{{system.rollFormula}}" placeholder="e.g. 1d4+3" data-dtype="String"/>
+          </div>
+          {{/if}}
+          <div class="resource">
+            <label>{{localize "DW.MagicItem"}}</label>
+            <input type="checkbox" name="system.magic" {{checked system.magic}}/>
+          </div>
+          <div class="resource">
+            <label>{{localize "DW.ItemType"}}</label>
+            <select name="system.itemType" data-dtype="String">
+              {{#select system.itemType}}
+              <option value="">—</option>
+              <option value="weapon">{{localize "DW.Weapon"}}</option>
+              <option value="armor">{{localize "DW.Armor"}}</option>
+              <option value="dungeongear">{{localize "DW.DungeonGear"}}</option>
+              <option value="poison">{{localize "DW.Poison"}}</option>
+              <option value="service">{{localize "DW.Service"}}</option>
+              <option value="meal">{{localize "DW.Meal"}}</option>
+              <option value="transport">{{localize "DW.Transport"}}</option>
+              <option value="landbuilding">{{localize "DW.LandBuildings"}}</option>
+              <option value="bribe">{{localize "DW.Bribe"}}</option>
+              <option value="giftsfinery">{{localize "DW.GiftsFinery"}}</option>
+              <option value="hoard">{{localize "DW.Hoard"}}</option>
+              {{/select}}
+            </select>
+          </div>
+        </div>
+    </section>
+  </div>
+</form>
