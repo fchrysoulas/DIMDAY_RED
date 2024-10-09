@@ -1,0 +1,504 @@
+{
+  "title": "DIMDAY_RED",
+  "description": "The DIMDAY_RED system for FoundryVTT!",
+  "version": "0.1",
+  "compatibility": {
+    "minimum": "11",
+    "verified": "11.315",
+    "maximum": "12"
+  },
+  "authors": [
+    {
+      "name": "Mikrokouneli",
+      "flags": {}
+    }
+  ],
+  "esmodules": [
+    "module/dimdayred.js"
+  ],
+  "styles": [
+    "styles/lib/tagify.css",
+    "styles/dist/dimdayred.css"
+  ],
+  "scripts": [
+    "scripts/lib/tagify.min.js"
+  ],
+  "packs": [
+    {
+      "name": "classes",
+      "label": "Classes",
+      "system": "dimdayworld",
+      "path": "packs/classes",
+      "type": "Item",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      },
+      "flags": {}
+    },
+    {
+      "name": "basic-moves",
+      "label": "Basic Moves",
+      "system": "dimdayworld",
+      "path": "packs/basic-moves",
+      "type": "Item",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      },
+      "flags": {}
+    },
+    {
+      "name": "the-barbarian-moves",
+      "label": "The Barbarian Moves",
+      "system": "dimdayworld",
+      "path": "packs/the-barbarian-moves",
+      "type": "Item",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      },
+      "flags": {}
+    },
+    {
+      "name": "the-bard-moves",
+      "label": "The Bard Moves",
+      "system": "dimdayworld",
+      "path": "packs/the-bard-moves",
+      "type": "Item",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      },
+      "flags": {}
+    },
+    {
+      "name": "the-cleric-moves",
+      "label": "The Cleric Moves",
+      "system": "dimdayworld",
+      "path": "packs/the-cleric-moves",
+      "type": "Item",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      },
+      "flags": {}
+    },
+    {
+      "name": "the-cleric-spells",
+      "label": "The Cleric Spells",
+      "system": "dimdayworld",
+      "path": "packs/the-cleric-spells",
+      "type": "Item",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      },
+      "flags": {}
+    },
+    {
+      "name": "the-druid-moves",
+      "label": "The Druid Moves",
+      "system": "dimdayworld",
+      "path": "packs/the-druid-moves",
+      "type": "Item",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      },
+      "flags": {}
+    },
+    {
+      "name": "the-fighter-moves",
+      "label": "The Fighter Moves",
+      "system": "dimdayworld",
+      "path": "packs/the-fighter-moves",
+      "type": "Item",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      },
+      "flags": {}
+    },
+    {
+      "name": "the-immolator-moves",
+      "label": "The Immolator Moves",
+      "system": "dimdayworld",
+      "path": "packs/the-immolator-moves",
+      "type": "Item",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      },
+      "flags": {}
+    },
+    {
+      "name": "the-paladin-moves",
+      "label": "The Paladin Moves",
+      "system": "dimdayworld",
+      "path": "packs/the-paladin-moves",
+      "type": "Item",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      },
+      "flags": {}
+    },
+    {
+      "name": "the-ranger-moves",
+      "label": "The Ranger Moves",
+      "system": "dimdayworld",
+      "path": "packs/the-ranger-moves",
+      "type": "Item",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      },
+      "flags": {}
+    },
+    {
+      "name": "the-thief-moves",
+      "label": "The Thief Moves",
+      "system": "dimdayworld",
+      "path": "packs/the-thief-moves",
+      "type": "Item",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      },
+      "flags": {}
+    },
+    {
+      "name": "the-wizard-moves",
+      "label": "The Wizard Moves",
+      "system": "dimdayworld",
+      "path": "packs/the-wizard-moves",
+      "type": "Item",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      },
+      "flags": {}
+    },
+    {
+      "name": "the-wizard-spells",
+      "label": "The Wizard Spells",
+      "system": "dimdayworld",
+      "path": "packs/the-wizard-spells",
+      "type": "Item",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      },
+      "flags": {}
+    },
+    {
+      "name": "tags",
+      "label": "Tags",
+      "system": "dimdayworld",
+      "path": "packs/tags",
+      "type": "Item",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      },
+      "flags": {}
+    },
+    {
+      "name": "equipment-armor",
+      "label": "Equipment (Armor)",
+      "system": "dimdayworld",
+      "path": "packs/equipment-armor",
+      "type": "Item",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      },
+      "flags": {}
+    },
+    {
+      "name": "equipment-class",
+      "label": "Equipment (Class)",
+      "system": "dimdayworld",
+      "path": "packs/equipment-class",
+      "type": "Item",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      },
+      "flags": {}
+    },
+    {
+      "name": "equipment-gear",
+      "label": "Equipment (Gear)",
+      "system": "dimdayworld",
+      "path": "packs/equipment-gear",
+      "type": "Item",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      },
+      "flags": {}
+    },
+    {
+      "name": "equipment-magic",
+      "label": "Equipment (Magic)",
+      "system": "dimdayworld",
+      "path": "packs/equipment-magic",
+      "type": "Item",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      },
+      "flags": {}
+    },
+    {
+      "name": "equipment-poisons",
+      "label": "Equipment (Poisons)",
+      "system": "dimdayworld",
+      "path": "packs/equipment-poisons",
+      "type": "Item",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      },
+      "flags": {}
+    },
+    {
+      "name": "equipment-weapons",
+      "label": "Equipment (Weapons)",
+      "system": "dimdayworld",
+      "path": "packs/equipment-weapons",
+      "type": "Item",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      },
+      "flags": {}
+    },
+    {
+      "label": "Rollable Tables",
+      "type": "RollTable",
+      "name": "rollable-tables",
+      "path": "packs/rollable-tables",
+      "system": "dimdayworld",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      },
+      "flags": {}
+    },
+    {
+      "label": "GM Moves/Principals",
+      "type": "JournalEntry",
+      "name": "gm-movesprincipals",
+      "path": "packs/gm-movesprincipals",
+      "system": "dimdayworld",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      },
+      "flags": {}
+    },
+    {
+      "label": "Charts",
+      "type": "JournalEntry",
+      "name": "charts",
+      "path": "packs/charts",
+      "system": "dimdayworld",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      },
+      "flags": {}
+    },
+    {
+      "label": "Monsters - 01 Cavern Dwellers",
+      "type": "Actor",
+      "name": "monsters-01-cavern-dwellers",
+      "path": "packs/monsters-01-cavern-dwellers",
+      "system": "dimdayworld",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      },
+      "flags": {}
+    },
+    {
+      "label": "Monsters - 02 Swamp Denizens",
+      "type": "Actor",
+      "name": "monsters-02-swamp-denizens",
+      "path": "packs/monsters-02-swamp-denizens",
+      "system": "dimdayworld",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      },
+      "flags": {}
+    },
+    {
+      "label": "Monsters - 03 Undead Legions",
+      "type": "Actor",
+      "name": "monsters-03-undead-legions",
+      "path": "packs/monsters-03-undead-legions",
+      "system": "dimdayworld",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      },
+      "flags": {}
+    },
+    {
+      "label": "Monsters - 04 Dark Woods",
+      "type": "Actor",
+      "name": "monsters-04-dark-woods",
+      "path": "packs/monsters-04-dark-woods",
+      "system": "dimdayworld",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      },
+      "flags": {}
+    },
+    {
+      "label": "Monsters - 05 Ravenous Hordes",
+      "type": "Actor",
+      "name": "monsters-05-ravenous-hordes",
+      "path": "packs/monsters-05-ravenous-hordes",
+      "system": "dimdayworld",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      },
+      "flags": {}
+    },
+    {
+      "label": "Monsters - 06 Twisted Experiments",
+      "type": "Actor",
+      "name": "monsters-06-twisted-experiments",
+      "path": "packs/monsters-06-twisted-experiments",
+      "system": "dimdayworld",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      },
+      "flags": {}
+    },
+    {
+      "label": "Monsters - 07 Lower Depths",
+      "type": "Actor",
+      "name": "monsters-07-lower-depths",
+      "path": "packs/monsters-07-lower-depths",
+      "system": "dimdayworld",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      },
+      "flags": {}
+    },
+    {
+      "label": "Monsters - 08 Planar Powers",
+      "type": "Actor",
+      "name": "monsters-08-planar-powers",
+      "path": "packs/monsters-08-planar-powers",
+      "system": "dimdayworld",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      },
+      "flags": {}
+    },
+    {
+      "label": "Monsters - 09 Folk of the Realm",
+      "type": "Actor",
+      "name": "monsters-09-folk-of-the-realm",
+      "path": "packs/monsters-09-folk-of-the-realm",
+      "system": "dimdayworld",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      },
+      "flags": {}
+    },
+    {
+      "name": "gm-screen",
+      "label": "GM Screen",
+      "system": "dimdayworld",
+      "path": "packs/gm-screen",
+      "type": "JournalEntry",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      },
+      "flags": {}
+    },
+    {
+      "name": "tables",
+      "label": "Tables",
+      "system": "dimdayworld",
+      "path": "packs/tables",
+      "type": "RollTable",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      },
+      "flags": {}
+    }
+  ],
+  "languages": [
+    {
+      "lang": "en",
+      "name": "English",
+      "path": "lang/en.json",
+      "flags": {}
+    },
+    {
+      "lang": "es",
+      "name": "Español",
+      "path": "lang/es.json",
+      "flags": {}
+    },
+    {
+      "lang": "fr",
+      "name": "Français",
+      "path": "lang/fr.json",
+      "flags": {}
+    },
+    {
+      "lang": "de",
+      "name": "Deutsch",
+      "path": "lang/de.json",
+      "flags": {}
+    },
+    {
+      "lang": "sv",
+      "name": "Svenska",
+      "path": "lang/sv.json",
+      "flags": {}
+    },
+    {
+      "lang": "uk",
+      "name": "Українська (Ukrainian)",
+      "path": "lang/uk.json",
+      "flags": {}
+    },
+    {
+      "lang": "it",
+      "name": "Italiano",
+      "path": "lang/it.json",
+      "flags": {}
+    }
+  ],
+  "gridDistance": 5,
+  "gridUnits": "ft",
+  "primaryTokenAttribute": "attributes.hp",
+  "secondaryTokenAttribute": "attributes.xp",
+  "initiative": "1d20",
+  "socket": true,
+  "url": "",
+  "manifest": "",
+  "download": "",
+  "changelog": "",
+  "bugs": "",
+  "id": "dimdayworld"
+}
