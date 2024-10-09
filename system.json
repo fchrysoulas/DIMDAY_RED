@@ -27,7 +27,7 @@
     {
       "name": "classes",
       "label": "Classes",
-      "system": "dimdayworld",
+      "system": "dimdayred",
       "path": "packs/classes",
       "type": "Item",
       "ownership": {
@@ -39,7 +39,7 @@
     {
       "name": "basic-moves",
       "label": "Basic Moves",
-      "system": "dimdayworld",
+      "system": "dimdayred",
       "path": "packs/basic-moves",
       "type": "Item",
       "ownership": {
@@ -51,7 +51,7 @@
     {
       "name": "the-barbarian-moves",
       "label": "The Barbarian Moves",
-      "system": "dimdayworld",
+      "system": "dimdayred",
       "path": "packs/the-barbarian-moves",
       "type": "Item",
       "ownership": {
@@ -63,7 +63,7 @@
     {
       "name": "the-bard-moves",
       "label": "The Bard Moves",
-      "system": "dimdayworld",
+      "system": "dimdayred",
       "path": "packs/the-bard-moves",
       "type": "Item",
       "ownership": {
@@ -75,7 +75,7 @@
     {
       "name": "the-cleric-moves",
       "label": "The Cleric Moves",
-      "system": "dimdayworld",
+      "system": "dimdayred",
       "path": "packs/the-cleric-moves",
       "type": "Item",
       "ownership": {
@@ -87,7 +87,7 @@
     {
       "name": "the-cleric-spells",
       "label": "The Cleric Spells",
-      "system": "dimdayworld",
+      "system": "dimdayred",
       "path": "packs/the-cleric-spells",
       "type": "Item",
       "ownership": {
@@ -99,7 +99,7 @@
     {
       "name": "the-druid-moves",
       "label": "The Druid Moves",
-      "system": "dimdayworld",
+      "system": "dimdayred",
       "path": "packs/the-druid-moves",
       "type": "Item",
       "ownership": {
@@ -111,7 +111,7 @@
     {
       "name": "the-fighter-moves",
       "label": "The Fighter Moves",
-      "system": "dimdayworld",
+      "system": "dimdayred",
       "path": "packs/the-fighter-moves",
       "type": "Item",
       "ownership": {
@@ -123,7 +123,7 @@
     {
       "name": "the-immolator-moves",
       "label": "The Immolator Moves",
-      "system": "dimdayworld",
+      "system": "dimdayred",
       "path": "packs/the-immolator-moves",
       "type": "Item",
       "ownership": {
@@ -135,7 +135,7 @@
     {
       "name": "the-paladin-moves",
       "label": "The Paladin Moves",
-      "system": "dimdayworld",
+      "system": "dimdayred",
       "path": "packs/the-paladin-moves",
       "type": "Item",
       "ownership": {
@@ -147,7 +147,7 @@
     {
       "name": "the-ranger-moves",
       "label": "The Ranger Moves",
-      "system": "dimdayworld",
+      "system": "dimdayred",
       "path": "packs/the-ranger-moves",
       "type": "Item",
       "ownership": {
@@ -159,7 +159,7 @@
     {
       "name": "the-thief-moves",
       "label": "The Thief Moves",
-      "system": "dimdayworld",
+      "system": "dimdayred",
       "path": "packs/the-thief-moves",
       "type": "Item",
       "ownership": {
@@ -171,7 +171,7 @@
     {
       "name": "the-wizard-moves",
       "label": "The Wizard Moves",
-      "system": "dimdayworld",
+      "system": "dimdayred",
       "path": "packs/the-wizard-moves",
       "type": "Item",
       "ownership": {
@@ -183,7 +183,7 @@
     {
       "name": "the-wizard-spells",
       "label": "The Wizard Spells",
-      "system": "dimdayworld",
+      "system": "dimdayred",
       "path": "packs/the-wizard-spells",
       "type": "Item",
       "ownership": {
@@ -195,7 +195,7 @@
     {
       "name": "tags",
       "label": "Tags",
-      "system": "dimdayworld",
+      "system": "dimdayred",
       "path": "packs/tags",
       "type": "Item",
       "ownership": {
@@ -207,7 +207,7 @@
     {
       "name": "equipment-armor",
       "label": "Equipment (Armor)",
-      "system": "dimdayworld",
+      "system": "dimdayred",
       "path": "packs/equipment-armor",
       "type": "Item",
       "ownership": {
@@ -219,7 +219,7 @@
     {
       "name": "equipment-class",
       "label": "Equipment (Class)",
-      "system": "dimdayworld",
+      "system": "dimdayred",
       "path": "packs/equipment-class",
       "type": "Item",
       "ownership": {
@@ -231,7 +231,7 @@
     {
       "name": "equipment-gear",
       "label": "Equipment (Gear)",
-      "system": "dimdayworld",
+      "system": "dimdayred",
       "path": "packs/equipment-gear",
       "type": "Item",
       "ownership": {
@@ -243,7 +243,7 @@
     {
       "name": "equipment-magic",
       "label": "Equipment (Magic)",
-      "system": "dimdayworld",
+      "system": "dimdayred",
       "path": "packs/equipment-magic",
       "type": "Item",
       "ownership": {
@@ -255,7 +255,7 @@
     {
       "name": "equipment-poisons",
       "label": "Equipment (Poisons)",
-      "system": "dimdayworld",
+      "system": "dimdayred",
       "path": "packs/equipment-poisons",
       "type": "Item",
       "ownership": {
@@ -267,7 +267,7 @@
     {
       "name": "equipment-weapons",
       "label": "Equipment (Weapons)",
-      "system": "dimdayworld",
+      "system": "dimdayred",
       "path": "packs/equipment-weapons",
       "type": "Item",
       "ownership": {
@@ -281,7 +281,7 @@
       "type": "RollTable",
       "name": "rollable-tables",
       "path": "packs/rollable-tables",
-      "system": "dimdayworld",
+      "system": "dimdayred",
       "ownership": {
         "PLAYER": "OBSERVER",
         "ASSISTANT": "OWNER"
@@ -293,7 +293,7 @@
       "type": "JournalEntry",
       "name": "gm-movesprincipals",
       "path": "packs/gm-movesprincipals",
-      "system": "dimdayworld",
+      "system": "dimdayred",
       "ownership": {
         "PLAYER": "OBSERVER",
         "ASSISTANT": "OWNER"
@@ -305,7 +305,7 @@
       "type": "JournalEntry",
       "name": "charts",
       "path": "packs/charts",
-      "system": "dimdayworld",
+      "system": "dimdayred",
       "ownership": {
         "PLAYER": "OBSERVER",
         "ASSISTANT": "OWNER"
@@ -317,7 +317,7 @@
       "type": "Actor",
       "name": "monsters-01-cavern-dwellers",
       "path": "packs/monsters-01-cavern-dwellers",
-      "system": "dimdayworld",
+      "system": "dimdayred",
       "ownership": {
         "PLAYER": "OBSERVER",
         "ASSISTANT": "OWNER"
@@ -329,7 +329,7 @@
       "type": "Actor",
       "name": "monsters-02-swamp-denizens",
       "path": "packs/monsters-02-swamp-denizens",
-      "system": "dimdayworld",
+      "system": "dimdayred",
       "ownership": {
         "PLAYER": "OBSERVER",
         "ASSISTANT": "OWNER"
@@ -341,7 +341,7 @@
       "type": "Actor",
       "name": "monsters-03-undead-legions",
       "path": "packs/monsters-03-undead-legions",
-      "system": "dimdayworld",
+      "system": "dimdayred",
       "ownership": {
         "PLAYER": "OBSERVER",
         "ASSISTANT": "OWNER"
@@ -353,7 +353,7 @@
       "type": "Actor",
       "name": "monsters-04-dark-woods",
       "path": "packs/monsters-04-dark-woods",
-      "system": "dimdayworld",
+      "system": "dimdayred",
       "ownership": {
         "PLAYER": "OBSERVER",
         "ASSISTANT": "OWNER"
@@ -365,7 +365,7 @@
       "type": "Actor",
       "name": "monsters-05-ravenous-hordes",
       "path": "packs/monsters-05-ravenous-hordes",
-      "system": "dimdayworld",
+      "system": "dimdayred",
       "ownership": {
         "PLAYER": "OBSERVER",
         "ASSISTANT": "OWNER"
@@ -377,7 +377,7 @@
       "type": "Actor",
       "name": "monsters-06-twisted-experiments",
       "path": "packs/monsters-06-twisted-experiments",
-      "system": "dimdayworld",
+      "system": "dimdayred",
       "ownership": {
         "PLAYER": "OBSERVER",
         "ASSISTANT": "OWNER"
@@ -389,7 +389,7 @@
       "type": "Actor",
       "name": "monsters-07-lower-depths",
       "path": "packs/monsters-07-lower-depths",
-      "system": "dimdayworld",
+      "system": "dimdayred",
       "ownership": {
         "PLAYER": "OBSERVER",
         "ASSISTANT": "OWNER"
@@ -401,7 +401,7 @@
       "type": "Actor",
       "name": "monsters-08-planar-powers",
       "path": "packs/monsters-08-planar-powers",
-      "system": "dimdayworld",
+      "system": "dimdayred",
       "ownership": {
         "PLAYER": "OBSERVER",
         "ASSISTANT": "OWNER"
@@ -413,7 +413,7 @@
       "type": "Actor",
       "name": "monsters-09-folk-of-the-realm",
       "path": "packs/monsters-09-folk-of-the-realm",
-      "system": "dimdayworld",
+      "system": "dimdayred",
       "ownership": {
         "PLAYER": "OBSERVER",
         "ASSISTANT": "OWNER"
@@ -423,7 +423,7 @@
     {
       "name": "gm-screen",
       "label": "GM Screen",
-      "system": "dimdayworld",
+      "system": "dimdayred",
       "path": "packs/gm-screen",
       "type": "JournalEntry",
       "ownership": {
@@ -435,7 +435,7 @@
     {
       "name": "tables",
       "label": "Tables",
-      "system": "dimdayworld",
+      "system": "dimdayred",
       "path": "packs/tables",
       "type": "RollTable",
       "ownership": {
@@ -500,5 +500,5 @@
   "download": "",
   "changelog": "",
   "bugs": "",
-  "id": "dimdayworld"
+  "id": "dimdayred"
 }
