@@ -1,8 +1,8 @@
-2024/05/28-12:47:54.655492 ffff7c7f8160 Recovering log #20
-2024/05/28-12:47:54.661409 ffff7c7f8160 Delete type=0 #20
-2024/05/28-12:47:54.661429 ffff7c7f8160 Delete type=3 #18
-2024/05/28-12:47:57.171177 ffff7bff7160 Level-0 table #25: started
-2024/05/28-12:47:57.171193 ffff7bff7160 Level-0 table #25: 0 bytes OK
-2024/05/28-12:47:57.173497 ffff7bff7160 Delete type=0 #23
-2024/05/28-12:47:57.178191 ffff7bff7160 Manual compaction at level-0 from '!journal!XE4fIg1k2VOTyKIM' @ 72057594037927935 : 1 .. '!journal!z2daPa20ib3ddInc' @ 0 : 0; will stop at (end)
-2024/05/28-12:47:57.178339 ffff7bff7160 Manual compaction at level-1 from '!journal!XE4fIg1k2VOTyKIM' @ 72057594037927935 : 1 .. '!journal!z2daPa20ib3ddInc' @ 0 : 0; will stop at (end)
+2024/11/12-17:39:05.346666 ffff7e7fc160 Recovering log #212
+2024/11/12-17:39:05.353460 ffff7e7fc160 Delete type=0 #212
+2024/11/12-17:39:05.353626 ffff7e7fc160 Delete type=3 #210
+2024/11/12-17:58:47.910208 ffff7dffb160 Level-0 table #217: started
+2024/11/12-17:58:47.910296 ffff7dffb160 Level-0 table #217: 0 bytes OK
+2024/11/12-17:58:47.912949 ffff7dffb160 Delete type=0 #215
+2024/11/12-17:58:47.916281 ffff7dffb160 Manual compaction at level-0 from '!journal!XE4fIg1k2VOTyKIM' @ 72057594037927935 : 1 .. '!journal!z2daPa20ib3ddInc' @ 0 : 0; will stop at (end)
+2024/11/12-17:58:47.923290 ffff7dffb160 Manual compaction at level-1 from '!journal!XE4fIg1k2VOTyKIM' @ 72057594037927935 : 1 .. '!journal!z2daPa20ib3ddInc' @ 0 : 0; will stop at (end)

@@ -162,7 +162,7 @@ export class DwRolls {
   static async rollMoveExecute(roll, dataset, templateData, form = null) {
     // Render the roll.
     let template = 'systems/dimdayred/templates/chat/chat-move.html';
-    let dice = DwUtility.getRollFormula('2d6');
+    let dice = '{1d8sf=8, 1d8sf=8, 0, 0}kh2'; //DwUtility.getRollFormula('2d6');
     let forwardUsed = false;
     let rollModeUsed = false;
     let resultRangeNeeded = false;
@@ -255,9 +255,11 @@ export class DwRolls {
           if (overrideIsValid) formula = formula.replace('2d6', formulaOverride);
         }
 
-        if (formula.includes('2d6') || formulaOverride && formula.includes(formulaOverride)) {
-          resultRangeNeeded = true;
+        if (true) { //formula.includes('2d6') || formulaOverride && formula.includes(formulaOverride)) {
+          resultRangeNeeded = true; 
         }
+
+        
 
         // Handle adv/dis.
         let rollMode = this.actor.flags?.dimdayred?.rollMode ?? 'def';
@@ -303,11 +305,15 @@ export class DwRolls {
             break;
         }
 
+        window.alert("roll.js --> Append the modifiers.");
         // Append the modifiers.
         let modifiers = DwRolls.getModifiers(this.actor);
         formula = `${formula}${modifiers}`;
         forwardUsed = Number(this.actor.system.attributes?.forward?.value) != 0;
       }
+
+      window.alert("roll.js -->" + formula);
+
       if (formula != null) {
         // Do the roll.
         let roll = new Roll(`${formula}`, rollData);

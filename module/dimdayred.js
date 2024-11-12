@@ -105,15 +105,6 @@ Hooks.once("init", async function() {
     onChange: () => window.location.reload(),
   })
 
-  game.settings.register("dimdayred", "coinWeight", {
-    name: game.i18n.localize("DW.Settings.coinWeight.name"),
-    hint: game.i18n.localize("DW.Settings.coinWeight.hint"),
-    scope: "world",
-    config: true,
-    type: Number,
-    default: 100
-  });
-
   // TODO: Remove this setting.
   game.settings.register("dimdayred", "itemIcons", {
     name: game.i18n.localize("DW.Settings.itemIcons.name"),
@@ -268,24 +259,6 @@ Hooks.once("init", async function() {
     default: "DW.DebilityStr"
   });
 
-  game.settings.register("dimdayred", "debilityLabelDEX", {
-    name: game.i18n.localize("DW.Settings.debilityLabelDEX.name"),
-    hint: game.i18n.localize("DW.Settings.debilityLabelDEX.hint"),
-    scope: 'world',
-    config: true,
-    type: String,
-    default: "DW.DebilityDex"
-  });
-
-  game.settings.register("dimdayred", "debilityLabelCON", {
-    name: game.i18n.localize("DW.Settings.debilityLabelCON.name"),
-    hint: game.i18n.localize("DW.Settings.debilityLabelCON.hint"),
-    scope: 'world',
-    config: true,
-    type: String,
-    default: "DW.DebilityCon"
-  });
-
   game.settings.register("dimdayred", "debilityLabelINT", {
     name: game.i18n.localize("DW.Settings.debilityLabelINT.name"),
     hint: game.i18n.localize("DW.Settings.debilityLabelINT.hint"),
@@ -371,26 +344,34 @@ Hooks.once("ready", async function() {
 });
 
 Hooks.on('createChatMessage', async (message, options, id) => {
+
   // @todo expand this to work with multiple rolls.
   if (message?.rolls) {
+
     // Limit this to a single user.
     let firstGM = game.users.find(u => u.active && u.role == CONST.USER_ROLES.GAMEMASTER);
     if (!game.user.isGM || game.user.id !== firstGM.id) return;
+    
     // Exit early if this is a rollable table.
     if (message?.flags?.core?.RollTable) return;
+    
     // Retrieve the roll.
     let r = message.rolls[0] ?? null;
+   
     // Re-render the roll.
     if (r) {
       r.render().then(rTemplate => {
+        
         // Render the damage buttons.
         renderTemplate(`systems/dimdayred/templates/parts/chat-buttons.html`, {}).then(buttonTemplate => {
           if (message?.flags?.dimdayred?.damageButtons) return;
+          
           // Update the chat message with the appended buttons.
           message.update({
             content: rTemplate + buttonTemplate,
             'flags.dimdayred.damageButtons': true,
           })
+          
           // Update the chat log scroll position.
             .then(m => {
               let chatLog = document.querySelector('#chat-log');
@@ -403,6 +384,7 @@ Hooks.on('createChatMessage', async (message, options, id) => {
 });
 
 Hooks.on('renderChatMessage', (app, html, data) => {
+  
   // Determine visibility.
   let chatData = app;
   const whisper = chatData.whisper || [];
@@ -690,3 +672,45 @@ function rollItemMacro(itemData) {
     return item.roll();
   }
 }
+
+Hooks.once('diceSoNiceReady', (dice3d) => {
+
+dice3d.addColorset({
+  name: 'Dimdayred1',
+  description: "Dimday Red",
+  category: "Dimday Red",
+  foreground: '#ffffff',
+  background: '#bb474a',
+  outline: 'none',
+  edge: '#bb474a',
+  font: "dimdayred"
+},
+  'preferred'
+);
+
+dice3d.addColorset({
+  name: 'Dimdayred2',
+  description: "Dimday Black",
+  category: "Dimday Red",
+  foreground: '#fff',
+  background: '#000',
+  outline: 'none',
+  edge: '#000',
+  font: "dimdayred"
+},
+  'default'
+);
+
+
+  dice3d.addSystem({ id: 'dimdayred', name: "Dimday Red" }, 'preferred');
+  dice3d.addDicePreset({
+    type: 'd8',
+    labels: [
+        "1", "2", "3", "4", "5", "6", "7","systems/dimdayred/assets/icons/ddr-dice-0.png"
+    ],
+    bumpMaps: [
+        null, null, null, null, null, null, null, null
+    ],
+    system: 'dimdayred',
+  });
+});

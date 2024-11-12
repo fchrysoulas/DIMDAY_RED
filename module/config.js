@@ -4,8 +4,6 @@ export const DW = {};
 
 DW.abilities = {
   "str": "DW.AbilityStr",
-  "dex": "DW.AbilityDex",
-  "con": "DW.AbilityCon",
   "int": "DW.AbilityInt",
   "wis": "DW.AbilityWis",
   "cha": "DW.AbilityCha"
@@ -13,8 +11,6 @@ DW.abilities = {
 
 DW.debilities = {
   "str": "DW.DebilityStr",
-  "dex": "DW.DebilityDex",
-  "con": "DW.DebilityCon",
   "int": "DW.DebilityInt",
   "wis": "DW.DebilityWis",
   "cha": "DW.DebilityCha"
@@ -23,16 +19,16 @@ DW.debilities = {
 DW.rollResults = {
   failure: {
     start: null,
-    end: 6,
+    end: 7,
     label: 'DW.failure'
   },
   partial: {
-    start: 7,
-    end: 9,
+    start: 8,
+    end: 10,
     label: 'DW.partial'
   },
   success: {
-    start: 10,
+    start: 11,
     end: null,
     label: 'DW.success'
   }

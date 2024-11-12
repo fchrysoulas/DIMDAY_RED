@@ -27,102 +27,62 @@ export class ActorDw extends Actor {
 
     let debilities = {
       "str": game.settings.get('dimdayred', 'debilityLabelSTR'),
-      "dex": game.settings.get('dimdayred', 'debilityLabelDEX'),
-      "con": game.settings.get('dimdayred', 'debilityLabelCON'),
       "int": game.settings.get('dimdayred', 'debilityLabelINT'),
       "wis": game.settings.get('dimdayred', 'debilityLabelWIS'),
       "cha": game.settings.get('dimdayred', 'debilityLabelCHA')
     }
+
+    console.log("_prepareCharacterData");
 
     debilities = Object.entries(debilities).reduce((obj, e) => {
       obj[e[0]] = game.i18n.localize(e[1]);
       return obj;
     }, {});
 
-    const noAbilityScores = game.settings.get('dimdayred', 'noAbilityScores');
+    const noAbilityScores = true;
 
-    // Ability Scores
-    for (let [a, abl] of Object.entries(data.abilities)) {
-      // TODO: This is a possible formula, but would require limits on the
-      // upper and lower ends.
-      // abl.mod = Math.floor(abl.value * 0.4 - (abl.value < 11 ? 3.4 : 4.2));
 
-      // @todo: This could be improved by storing old scores in a flag.
-      // Convert ability scores if the no mod setting changed.
-      if (noAbilityScores) {
-        if (!Number.isNaN(abl.value) && abl.value > 3) {
-          abl.value = DwUtility.getAbilityMod(abl.value, true);
+       // Ability Scores
+       for (let [a, abl] of Object.entries(data.abilities)) {
+       
+       /*
+        if (noAbilityScores) {
+          if (!Number.isNaN(abl.value) && abl.value > 3) {
+            abl.value = DwUtility.getAbilityMod(abl.value, true);
+          }
         }
+        else {
+          if (!Number.isNaN(abl.value) && abl.value < 4) {
+            abl.value = DwUtility.getAbilityScore(abl.value, true);
+          }
+        }
+        */
+
+        // Ability modifiers.
+        abl.mod = abl.value;
+        
+  
+        // Add labels.
+        abl.label = CONFIG.DW.abilities[a];
+        abl.debilityLabel = debilities[a];
+        // Adjust mod based on debility.
+        if (abl.debility && !game.settings.get("dimdayred", "disDebility")) {
+          abl.mod -= 1;
+          abl.value -= 1;
+        }
+        
+        
+        // logging
+        /*
+        ChatMessage.create({
+          content: abl.label + ', Mod=' + abl.mod + ', Val=' + abl.value,
+          speaker: ChatMessage.getSpeaker({ alias: "Game Master" })
+        });
+        */
       }
-      else {
-        if (!Number.isNaN(abl.value) && abl.value < 4) {
-          abl.value = DwUtility.getAbilityScore(abl.value, true);
-        }
-      }
 
-      // Ability modifiers.
-      abl.mod = DwUtility.getAbilityMod(abl.value);
 
-      // Add labels.
-      abl.label = CONFIG.DW.abilities[a];
-      abl.debilityLabel = debilities[a];
-      // Adjust mod based on debility.
-      if (abl.debility && !game.settings.get("dimdayred", "disDebility")) {
-        abl.mod -= 1;
-      }
-    }
-
-    // Calculate weight.
-    let coin = data.attributes.coin.value ?? 0;
-    let coinWeight = game.settings.get("dimdayred", "coinWeight");
-    let weight = coinWeight > 0 ? Math.floor(coin/coinWeight ) : 0;
-    let items = actorData.items;
-    if (items) {
-      let equipment = items.filter(i => i.type == 'equipment');
-      equipment.forEach(i => {
-        // Add weight for each item.
-        let itemQuantity = Number(i.system.quantity);
-        let itemWeight = Number(i.system.weight);
-        if (itemWeight > 0) {
-          weight = weight + (itemQuantity * itemWeight);
-        }
-        // Add weapon tags.
-        if (i.system?.equipped && i.system.itemType == 'weapon') {
-          let tags = i.system.tags ? JSON.parse(i.system.tags) : [];
-          for (let tag of tags) {
-          // Match for piercing, armor, and damage tags.
-            let piercing = tag.value.toLowerCase().match(/(\d+)\s*piercing|piercing\s*(\d+)/) ?? [];
-            let ignoreArmor = tag.value.toLowerCase().includes('ignores armor');
-            let dmgBonus = tag.value.toLowerCase().match(/[+](\d+)\s*damage|damage\s*[+](\d+)/) ?? [];
-
-            // Add matching piercing tags if it's unset or if the value is higher.
-            if (piercing[1] > 0 || piercing[2] > 0) {
-              piercing = (piercing[1] ?? piercing[2]) ?? 0;
-              if (!data.attributes.damage?.piercing || piercing > data.attributes.damage.piercing) {
-                data.attributes.damage.piercing = piercing;
-              }
-            }
-
-            // Add matching ignore armor tags if it's unset.
-            if (!data.attributes.damage?.ignoreArmor) {
-              data.attributes.damage.ignoreArmor = ignoreArmor;
-            }
-
-              // Add matching damage bonus tags if it's unset or if the value is higher.
-              if (dmgBonus[1] > 0 || dmgBonus[2] > 0) { 
-                dmgBonus = (dmgBonus[1] ?? dmgBonus[2]) ?? 0;
-                if (!data.attributes.damage?.dmgBonus || dmgBonus > data.attributes.damage.dmgBonus) {
-                  data.attributes.damage.dmgBonus = dmgBonus;
-                }
-              }
-            }
-        }
-      });
-    }
-    // Update the value.
-    data.attributes.weight.value = weight;
-
-    // Add base flags.
+     // Add base flags.
     if (!actorData.flags.dimdayred) actorData.flags.dimdayred = {};
     if (!actorData.flags.dimdayred.sheetDisplay) actorData.flags.dimdayred.sheetDisplay = {};
 
@@ -321,6 +281,7 @@ export class ActorDw extends Actor {
     let hp = this.system?.attributes?.hp?.value ?? 0;
     let hpMax = this.system?.attributes?.hp?.max ?? 1;
     let armor = this.system?.attributes?.ac?.value ?? 0;
+    
     let piercing = options?.ignoreArmor ? armor : options?.piercing;
     let reduced = armor;
 
@@ -404,6 +365,14 @@ export class ActorDw extends Actor {
   async _onUpdate(updateData, options, userId) {
     await super._onUpdate(updateData, options, userId);
     const context = options?.dw?.preUpdate ?? false;
+
+
+    /*
+      ChatMessage.create({
+        content: context,
+        speaker: ChatMessage.getSpeaker({ alias: "Game Master" })
+      });
+      */
 
     if (!options.diff || !context || updateData.system === undefined) return; // Nothing to do.
 

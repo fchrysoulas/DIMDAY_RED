@@ -49,14 +49,10 @@
               {{#select system.rollType}}
               <option value="">—</option>
               <option value="STR">{{localize "DW.STR"}}</option>
-              <option value="DEX">{{localize "DW.DEX"}}</option>
-              <option value="CON">{{localize "DW.CON"}}</option>
               <option value="INT">{{localize "DW.INT"}}</option>
               <option value="WIS">{{localize "DW.WIS"}}</option>
               <option value="CHA">{{localize "DW.CHA"}}</option>
               <option value="ASK">{{localize "DW.ASK"}}</option>
-              <option value="BOND">{{localizeOverride "DW.Modifier" "bondSingle"}}</option>
-              <option value="FORMULA">{{localize "DW.FORMULA"}}</option>
               {{/select}}
             </select>
           </div>
@@ -78,9 +74,11 @@
             <select name="system.class">
               {{#select system.class}}
                 <option value="">—</option>
-                {{#each system.classlist as |class id|}}
-                <option value="{{class}}">{{class}}</option>
-                {{/each}}
+                <option value="aug">AUG</option>
+                <option value="hardskin">HARDSKIN</option>
+                <option value="marbleeyes">MARBLE EYES</option>
+                <option value="oldboy">OLDBOY</option>
+                <option value="zealot">ZEALOT</option>
               {{/select}}
             </select>
           </div>
@@ -90,10 +88,10 @@
             <select name="system.moveType" data-dtype="String">
               {{#select system.moveType}}
               <option value="">—</option>
-              <option value="basic">{{localize "DW.MoveBasic"}}</option>
-              <option value="starting">{{localize "DW.MoveStarting"}}</option>
-              <option value="advanced">{{localize "DW.MoveAdvanced"}}</option>
-              <option value="special">{{localize "DW.MoveSpecial"}}</option>
+              <option value="basic">Basic</option>
+              <option value="starting">Class</option>
+              <option value="advanced">Idioms</option>
+              <option value="special">Special</option>
               {{/select}}
             </select>
           </div>
@@ -110,7 +108,7 @@
 
           <div class="resource">
             <label>{{localize "DW.MoveGroup"}}</label>
-            <input type="text" name="system.moveGroup" value="{{system.moveGroup}}" placeholder="ex: barbarian-armor" data-dtype="String"/>
+            <input type="text" name="system.moveGroup" value="{{system.moveGroup}}" data-dtype="String"/>
             <span class="help-text">{{localize "DW.MoveGroupHelp"}}</span>
           </div>
 

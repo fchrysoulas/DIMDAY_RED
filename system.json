@@ -49,150 +49,6 @@
       "flags": {}
     },
     {
-      "name": "the-barbarian-moves",
-      "label": "The Barbarian Moves",
-      "system": "dimdayred",
-      "path": "packs/the-barbarian-moves",
-      "type": "Item",
-      "ownership": {
-        "PLAYER": "OBSERVER",
-        "ASSISTANT": "OWNER"
-      },
-      "flags": {}
-    },
-    {
-      "name": "the-bard-moves",
-      "label": "The Bard Moves",
-      "system": "dimdayred",
-      "path": "packs/the-bard-moves",
-      "type": "Item",
-      "ownership": {
-        "PLAYER": "OBSERVER",
-        "ASSISTANT": "OWNER"
-      },
-      "flags": {}
-    },
-    {
-      "name": "the-cleric-moves",
-      "label": "The Cleric Moves",
-      "system": "dimdayred",
-      "path": "packs/the-cleric-moves",
-      "type": "Item",
-      "ownership": {
-        "PLAYER": "OBSERVER",
-        "ASSISTANT": "OWNER"
-      },
-      "flags": {}
-    },
-    {
-      "name": "the-cleric-spells",
-      "label": "The Cleric Spells",
-      "system": "dimdayred",
-      "path": "packs/the-cleric-spells",
-      "type": "Item",
-      "ownership": {
-        "PLAYER": "OBSERVER",
-        "ASSISTANT": "OWNER"
-      },
-      "flags": {}
-    },
-    {
-      "name": "the-druid-moves",
-      "label": "The Druid Moves",
-      "system": "dimdayred",
-      "path": "packs/the-druid-moves",
-      "type": "Item",
-      "ownership": {
-        "PLAYER": "OBSERVER",
-        "ASSISTANT": "OWNER"
-      },
-      "flags": {}
-    },
-    {
-      "name": "the-fighter-moves",
-      "label": "The Fighter Moves",
-      "system": "dimdayred",
-      "path": "packs/the-fighter-moves",
-      "type": "Item",
-      "ownership": {
-        "PLAYER": "OBSERVER",
-        "ASSISTANT": "OWNER"
-      },
-      "flags": {}
-    },
-    {
-      "name": "the-immolator-moves",
-      "label": "The Immolator Moves",
-      "system": "dimdayred",
-      "path": "packs/the-immolator-moves",
-      "type": "Item",
-      "ownership": {
-        "PLAYER": "OBSERVER",
-        "ASSISTANT": "OWNER"
-      },
-      "flags": {}
-    },
-    {
-      "name": "the-paladin-moves",
-      "label": "The Paladin Moves",
-      "system": "dimdayred",
-      "path": "packs/the-paladin-moves",
-      "type": "Item",
-      "ownership": {
-        "PLAYER": "OBSERVER",
-        "ASSISTANT": "OWNER"
-      },
-      "flags": {}
-    },
-    {
-      "name": "the-ranger-moves",
-      "label": "The Ranger Moves",
-      "system": "dimdayred",
-      "path": "packs/the-ranger-moves",
-      "type": "Item",
-      "ownership": {
-        "PLAYER": "OBSERVER",
-        "ASSISTANT": "OWNER"
-      },
-      "flags": {}
-    },
-    {
-      "name": "the-thief-moves",
-      "label": "The Thief Moves",
-      "system": "dimdayred",
-      "path": "packs/the-thief-moves",
-      "type": "Item",
-      "ownership": {
-        "PLAYER": "OBSERVER",
-        "ASSISTANT": "OWNER"
-      },
-      "flags": {}
-    },
-    {
-      "name": "the-wizard-moves",
-      "label": "The Wizard Moves",
-      "system": "dimdayred",
-      "path": "packs/the-wizard-moves",
-      "type": "Item",
-      "ownership": {
-        "PLAYER": "OBSERVER",
-        "ASSISTANT": "OWNER"
-      },
-      "flags": {}
-    },
-    {
-      "name": "the-wizard-spells",
-      "label": "The Wizard Spells",
-      "system": "dimdayred",
-      "path": "packs/the-wizard-spells",
-      "type": "Item",
-      "ownership": {
-        "PLAYER": "OBSERVER",
-        "ASSISTANT": "OWNER"
-      },
-      "flags": {}
-    },
-    {
       "name": "tags",
       "label": "Tags",
       "system": "dimdayred",
@@ -241,34 +97,10 @@
       "flags": {}
     },
     {
-      "name": "equipment-magic",
-      "label": "Equipment (Magic)",
+      "name": "moribus",
+      "label": "Moribus",
       "system": "dimdayred",
-      "path": "packs/equipment-magic",
-      "type": "Item",
-      "ownership": {
-        "PLAYER": "OBSERVER",
-        "ASSISTANT": "OWNER"
-      },
-      "flags": {}
-    },
-    {
-      "name": "equipment-poisons",
-      "label": "Equipment (Poisons)",
-      "system": "dimdayred",
-      "path": "packs/equipment-poisons",
-      "type": "Item",
-      "ownership": {
-        "PLAYER": "OBSERVER",
-        "ASSISTANT": "OWNER"
-      },
-      "flags": {}
-    },
-    {
-      "name": "equipment-weapons",
-      "label": "Equipment (Weapons)",
-      "system": "dimdayred",
-      "path": "packs/equipment-weapons",
+      "path": "packs/moribus",
       "type": "Item",
       "ownership": {
         "PLAYER": "OBSERVER",
@@ -293,126 +125,6 @@
       "type": "JournalEntry",
       "name": "gm-movesprincipals",
       "path": "packs/gm-movesprincipals",
-      "system": "dimdayred",
-      "ownership": {
-        "PLAYER": "OBSERVER",
-        "ASSISTANT": "OWNER"
-      },
-      "flags": {}
-    },
-    {
-      "label": "Charts",
-      "type": "JournalEntry",
-      "name": "charts",
-      "path": "packs/charts",
-      "system": "dimdayred",
-      "ownership": {
-        "PLAYER": "OBSERVER",
-        "ASSISTANT": "OWNER"
-      },
-      "flags": {}
-    },
-    {
-      "label": "Monsters - 01 Cavern Dwellers",
-      "type": "Actor",
-      "name": "monsters-01-cavern-dwellers",
-      "path": "packs/monsters-01-cavern-dwellers",
-      "system": "dimdayred",
-      "ownership": {
-        "PLAYER": "OBSERVER",
-        "ASSISTANT": "OWNER"
-      },
-      "flags": {}
-    },
-    {
-      "label": "Monsters - 02 Swamp Denizens",
-      "type": "Actor",
-      "name": "monsters-02-swamp-denizens",
-      "path": "packs/monsters-02-swamp-denizens",
-      "system": "dimdayred",
-      "ownership": {
-        "PLAYER": "OBSERVER",
-        "ASSISTANT": "OWNER"
-      },
-      "flags": {}
-    },
-    {
-      "label": "Monsters - 03 Undead Legions",
-      "type": "Actor",
-      "name": "monsters-03-undead-legions",
-      "path": "packs/monsters-03-undead-legions",
-      "system": "dimdayred",
-      "ownership": {
-        "PLAYER": "OBSERVER",
-        "ASSISTANT": "OWNER"
-      },
-      "flags": {}
-    },
-    {
-      "label": "Monsters - 04 Dark Woods",
-      "type": "Actor",
-      "name": "monsters-04-dark-woods",
-      "path": "packs/monsters-04-dark-woods",
-      "system": "dimdayred",
-      "ownership": {
-        "PLAYER": "OBSERVER",
-        "ASSISTANT": "OWNER"
-      },
-      "flags": {}
-    },
-    {
-      "label": "Monsters - 05 Ravenous Hordes",
-      "type": "Actor",
-      "name": "monsters-05-ravenous-hordes",
-      "path": "packs/monsters-05-ravenous-hordes",
-      "system": "dimdayred",
-      "ownership": {
-        "PLAYER": "OBSERVER",
-        "ASSISTANT": "OWNER"
-      },
-      "flags": {}
-    },
-    {
-      "label": "Monsters - 06 Twisted Experiments",
-      "type": "Actor",
-      "name": "monsters-06-twisted-experiments",
-      "path": "packs/monsters-06-twisted-experiments",
-      "system": "dimdayred",
-      "ownership": {
-        "PLAYER": "OBSERVER",
-        "ASSISTANT": "OWNER"
-      },
-      "flags": {}
-    },
-    {
-      "label": "Monsters - 07 Lower Depths",
-      "type": "Actor",
-      "name": "monsters-07-lower-depths",
-      "path": "packs/monsters-07-lower-depths",
-      "system": "dimdayred",
-      "ownership": {
-        "PLAYER": "OBSERVER",
-        "ASSISTANT": "OWNER"
-      },
-      "flags": {}
-    },
-    {
-      "label": "Monsters - 08 Planar Powers",
-      "type": "Actor",
-      "name": "monsters-08-planar-powers",
-      "path": "packs/monsters-08-planar-powers",
-      "system": "dimdayred",
-      "ownership": {
-        "PLAYER": "OBSERVER",
-        "ASSISTANT": "OWNER"
-      },
-      "flags": {}
-    },
-    {
-      "label": "Monsters - 09 Folk of the Realm",
-      "type": "Actor",
-      "name": "monsters-09-folk-of-the-realm",
-      "path": "packs/monsters-09-folk-of-the-realm",
       "system": "dimdayred",
       "ownership": {
         "PLAYER": "OBSERVER",
@@ -451,48 +163,12 @@
       "name": "English",
       "path": "lang/en.json",
       "flags": {}
-    },
-    {
-      "lang": "es",
-      "name": "Español",
-      "path": "lang/es.json",
-      "flags": {}
-    },
-    {
-      "lang": "fr",
-      "name": "Français",
-      "path": "lang/fr.json",
-      "flags": {}
-    },
-    {
-      "lang": "de",
-      "name": "Deutsch",
-      "path": "lang/de.json",
-      "flags": {}
-    },
-    {
-      "lang": "sv",
-      "name": "Svenska",
-      "path": "lang/sv.json",
-      "flags": {}
-    },
-    {
-      "lang": "uk",
-      "name": "Українська (Ukrainian)",
-      "path": "lang/uk.json",
-      "flags": {}
-    },
-    {
-      "lang": "it",
-      "name": "Italiano",
-      "path": "lang/it.json",
-      "flags": {}
     }
   ],
   "gridDistance": 5,
   "gridUnits": "ft",
   "primaryTokenAttribute": "attributes.hp",
-  "secondaryTokenAttribute": "attributes.xp",
+  "secondaryTokenAttribute": "attributes.heat",
   "initiative": "1d20",
   "socket": true,
   "url": "",

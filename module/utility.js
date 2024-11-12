@@ -45,8 +45,9 @@ export class DwUtility {
     return defaultFormula;
   }
 
+  /*
   static getAbilityMod(abilityScore, force=false) {
-    const noAbilityScores = game.settings.get('dimdayred', 'noAbilityScores');
+    const noAbilityScores = true; //game.settings.get('dimdayred', 'noAbilityScores');
     if (noAbilityScores && !force) {
       return abilityScore
     }
@@ -109,6 +110,7 @@ export class DwUtility {
 
     return abilityScore;
   }
+    */
 
   static getProgressCircle({ current = 100, max = 100, radius = 16 }) {
     let circumference = radius * 2 * Math.PI;

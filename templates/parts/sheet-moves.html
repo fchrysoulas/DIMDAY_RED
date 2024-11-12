@@ -2,7 +2,7 @@
   <div class="item-avatar">
     <span class="rollable move-rollable" data-roll="{{item.system.rollType}}" data-mod="{{item.system.rollMod}}">
       {{#if item.system.rollType}}
-        <i class="fas fa-dice-d6"></i> <i class="fas fa-dice-d6"></i>
+        <i class="fas fa-dice-d8"></i> <i class="fas fa-dice-d8"></i>
       {{else if item.system.rollFormula}}
         <i class="fas fa-dice-d20"></i>
       {{else}}
@@ -37,13 +37,13 @@
 <div class="item-description">
   <div>{{{item.system.descriptionEnriched}}}</div>
   {{#if item.system.moveResults.success.value}}
-    <div class="result result--success"><strong class="result-label">10+:</strong>{{{item.system.moveResults.success.enriched}}}</div>
+    <div class="result result--success"><strong class="result-label">11+:</strong>{{{item.system.moveResults.success.enriched}}}</div>
   {{/if}}
   {{#if item.system.moveResults.partial.value}}
-    <div class="result result--partial"><strong class="result-label">7-9:</strong>{{{item.system.moveResults.partial.enriched}}}</div>
+    <div class="result result--partial"><strong class="result-label">8-10:</strong>{{{item.system.moveResults.partial.enriched}}}</div>
   {{/if}}
   {{#if item.system.moveResults.failure.value}}
-    <div class="result result--failure"><strong class="result-label">6-:</strong>{{{item.system.moveResults.failure.enriched}}}</div>
+    <div class="result result--failure"><strong class="result-label">7-:</strong>{{{item.system.moveResults.failure.enriched}}}</div>
   {{/if}}
   {{#if item.system.choices}}
     <div class="result result--choices"><strong class="result-label">{{localize 'DW.Choices'}}:</strong>{{{item.system.choicesEnriched}}}</div>

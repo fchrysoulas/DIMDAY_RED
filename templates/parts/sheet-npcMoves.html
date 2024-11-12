@@ -23,13 +23,13 @@
 <div class="item-description">
   <div>{{{item.system.description}}}</div>
   {{#if item.system.moveResults.success.value}}
-    <div class="result result--success"><strong class="result-label">10+:</strong>{{{item.system.moveResults.success.value}}}</div>
+    <div class="result result--success"><strong class="result-label">11+:</strong>{{{item.system.moveResults.success.value}}}</div>
   {{/if}}
   {{#if item.system.moveResults.partial.value}}
-    <div class="result result--partial"><strong class="result-label">7-9:</strong>{{{item.system.moveResults.partial.value}}}</div>
+    <div class="result result--partial"><strong class="result-label">8-10:</strong>{{{item.system.moveResults.partial.value}}}</div>
   {{/if}}
   {{#if item.system.moveResults.failure.value}}
-    <div class="result result--failure"><strong class="result-label">6-:</strong>{{{item.system.moveResults.failure.value}}}</div>
+    <div class="result result--failure"><strong class="result-label">7-:</strong>{{{item.system.moveResults.failure.value}}}</div>
   {{/if}}
   {{#if item.system.choices}}
     <div class="result result--choices"><strong class="result-label">{{localize 'DW.Choices'}}:</strong>{{{item.system.choices}}}</div>

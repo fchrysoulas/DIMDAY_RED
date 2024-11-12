@@ -1,5 +1,11 @@
-@import"https://fonts.googleapis.com/css2?family=Metamorphous&display=swap";
-@import"https://fonts.googleapis.com/css2?family=Alegreya:ital,wght@0,400;0,700;1,400;1,700&display=swap";
+@font-face {
+    font-family: "dimdayred";
+    src: url("../../assets/fonts/dimdayred.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+    font-display: block;
+  }
+
 
 @-webkit-keyframes jiggle {
     0% {
@@ -195,7 +201,7 @@ a.tag:focus {
 }
 
 .tagging .tag {
-    background-color: #5b7094;
+    background-color: #bb474a;
     padding: 4px 22px 4px 6px
 }
 
@@ -205,7 +211,7 @@ a.tag:focus {
 
 .tagging .tag .tag-i:hover,
 .tagging .tag .tag-i:focus {
-    color: #2d3748
+    color: #bb474a
 }
 
 .tagging .tag>span {
@@ -214,8 +220,8 @@ a.tag:focus {
 
 .tagging .tag-input:hover,
 .tagging .tag-input:focus {
-    -webkit-box-shadow: 0 1px 0 #5b7094;
-    box-shadow: 0 1px 0 #5b7094
+    -webkit-box-shadow: 0 1px 0 #bb474a;
+    box-shadow: 0 1px 0 #bb474a
 }
 
 .remove-tag {
@@ -256,11 +262,11 @@ a.tag:focus {
 }
 
 .awesomplete>ul {
-    background-color: #5b7094
+    background-color: #bb474a
 }
 
 .awesomplete>ul::before {
-    background-color: #5b7094
+    background-color: #bb474a
 }
 
 .help-text {
@@ -269,19 +275,19 @@ a.tag:focus {
 }
 
 .vtt .window-app {
-    background: #2d3748
+    background: #1d1d1b
 }
 
 .vtt .window-app a:hover,
 .vtt .window-app a:focus,
 .vtt .window-app.filepicker .file-directory>li:hover,
 .vtt .window-app.filepicker .file-directory>li:focus {
-    color: #5b7094;
+    color: #1d1d1b;
     text-shadow: 0 0 5px rgba(91, 112, 148, .25)
 }
 
 .vtt .window-app .tabs .item.active {
-    color: #5b7094;
+    color: #1d1d1b;
     text-shadow: 0 0 5px rgba(91, 112, 148, .25)
 }
 
@@ -289,7 +295,7 @@ a.tag:focus {
 .vtt .window-app button,
 .vtt .window-app select,
 .vtt .window-app textarea {
-    font-family: "Alegreya", serif;
+    font-family: "Calibri", serif;
     font-size: 14px;
     border: 0
 }
@@ -368,7 +374,7 @@ a.tag:focus {
 }
 
 .vtt .window-app button {
-    font-family: "Alegreya", serif;
+    font-family: "Calibri", serif;
     border: 0;
     background: #edf2f7
 }
@@ -410,19 +416,19 @@ a.tag:focus {
     -webkit-box-flex: 1;
     -ms-flex: 1;
     flex: 1;
-    background: #2d3748;
+    background: #1d1d1b;
     color: #fff;
     border: 0
 }
 
 .vtt .window-app .dialog-buttons .dialog-button:hover,
 .vtt .window-app .dialog-button:hover {
-    background: #5b7094
+    background: #bb474a
 }
 
 .vtt .window-header {
     color: #fff;
-    font-family: "Metamorphous", serif
+    font-family: "DimdayRed", serif
 }
 
 .vtt .window-header a:hover,
@@ -484,11 +490,14 @@ a.tag:focus {
 
 .vtt #chat-log .message {
     background: #fff;
-    font-family: "Alegreya", serif
+    font-family: "Calibri", serif
 }
 
 .vtt #chat-log .message .message-sender {
-    font-family: "Alegreya", serif
+    font-family: "dimdayred", serif;
+    font-size: 20px;
+    font-weight: normal;
+    
 }
 
 .vtt #chat-log .message .chat-title {
@@ -498,7 +507,9 @@ a.tag:focus {
     border: 1px solid rgba(0, 0, 0, .05);
     border-left: 0;
     border-right: 0;
-    padding: 4px 0
+    padding: 4px;
+    color: #fff;
+    background-color:#bb474a;
 }
 
 .vtt #chat-log .message .item-icon {
@@ -511,11 +522,12 @@ a.tag:focus {
 }
 
 .vtt #chat-log .message .cell__title {
-    font-size: 20px;
+    font-size: 24px;
     text-transform: capitalize;
     line-height: 1;
     margin: 0;
-    border: 0
+    border: 0;
+    font-weight: normal;
 }
 
 .vtt #chat-log .message.whisper {
@@ -524,19 +536,19 @@ a.tag:focus {
 
 .vtt #chat-log .message .result {
     padding: 0;
-    margin: 25px 0;
-    border: 2px solid;
+    margin: 10px 0;
     border-left: 0;
     border-right: 0
 }
 
 .vtt #chat-log .message .result-label {
     text-align: center;
-    font-size: 18px;
+    font-size: 20px;
     font-weight: bold;
     border-bottom: 1px solid #ccc;
     margin: 0;
     padding: 10px;
+    font-family: "dimdayred";
     background: #efefef
 }
 
@@ -558,7 +570,7 @@ a.tag:focus {
 }
 
 .vtt #chat-log .message .success {
-    color: #1a6dc3
+    color: #000
 }
 
 .vtt #chat-log .message .critical {
@@ -570,7 +582,7 @@ a.tag:focus {
 }
 
 .vtt #chat-log .cell__title {
-    font-family: "Metamorphous", serif;
+    font-family: "DimdayRed", serif;
     font-weight: bold;
     font-size: 16px;
     border-bottom: 2px solid #000;
@@ -582,7 +594,7 @@ a.tag:focus {
 .vtt #chat-log h3,
 .vtt #chat-log h4,
 .vtt #chat-log h5 {
-    font-family: "Metamorphous", serif;
+    font-family: "DimdayRed", serif;
     font-weight: bold
 }
 
@@ -591,7 +603,17 @@ a.tag:focus {
 }
 
 .vtt #chat-log .dice-roll .dice-formula {
-    cursor: pointer
+    cursor: pointer;
+    display:none;
+}
+
+.vtt #chat-log h4 {
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.dice-roll .dice-total {
+    font-size: 24px;
 }
 
 .vtt #chat-log .dice-roll .dice-formula:hover,
@@ -613,7 +635,7 @@ a.tag:focus {
     -webkit-box-shadow: 0 0 2px #fff inset;
     box-shadow: 0 0 2px #fff inset;
     word-break: break-all;
-    font-family: "Alegreya", serif
+    font-family: "Calibri", serif
 }
 
 .vtt #chat-log .message-content .chat-damage-buttons {
@@ -625,7 +647,7 @@ a.tag:focus {
 
 .vtt #chat-log .message-content .xp-button,
 .vtt #chat-log .message-content .chat-damage-buttons .button {
-    background: #2d3748;
+    background: #1d1d1b;
     -webkit-box-shadow: 0 0 2px #7e94bd inset;
     box-shadow: 0 0 2px #7e94bd inset;
     border-color: #000;
@@ -636,7 +658,7 @@ a.tag:focus {
 
 .vtt #chat-log .message-content .xp-button:hover,
 .vtt #chat-log .message-content .chat-damage-buttons .button:hover {
-    background: #5b7094;
+    background: #bb474a;
     -webkit-box-shadow: 0 0 2px #bcc8de inset;
     box-shadow: 0 0 2px #bcc8de inset
 }
@@ -693,17 +715,17 @@ a.tag:focus {
 }
 
 .vtt .sidebar-tab {
-    font-family: "Alegreya", serif
+    font-family: "Calibri", serif
 }
 
 .vtt .sidebar-tab #combat-round h3 {
-    font-family: "Metamorphous", serif
+    font-family: "DimdayRed", serif
 }
 
 .vtt .sidebar-tab .directory-item--group,
 .vtt .sidebar-tab .combat-control[data-control=endCombat],
 .vtt .sidebar-tab .combat-control[data-control=startCombat] {
-    font-family: "Metamorphous", serif
+    font-family: "DimdayRed", serif
 }
 
 .vtt .sidebar-tab .directory-item--group {
@@ -804,7 +826,7 @@ a.tag:focus {
 .vtt .sidebar-tab .ct-item button {
     background: #5b7094;
     color: #fff;
-    font-family: "Alegreya", serif;
+    font-family: "Calibri", serif;
     border: 0
 }
 
@@ -812,7 +834,7 @@ a.tag:focus {
     text-shadow: none;
     -webkit-box-shadow: none;
     box-shadow: none;
-    background: #7e94bd
+    background: #bb474a
 }
 
 .vtt .sidebar-tab .ct-item input[type=text] {
@@ -901,8 +923,8 @@ a.tag:focus {
 }
 
 .vtt .sidebar-tab .actor-elem .ct-item--moves {
-    font-family: "Metamorphous", serif;
-    font-size: 14px
+    font-family: "Arial", serif;
+    font-size: 16px
 }
 
 .vtt .sidebar-tab .directory-item--labels {
@@ -947,7 +969,7 @@ a.tag:focus {
 }
 
 .dimdayred {
-    font-family: "Alegreya", serif
+    font-family: "Calibri", serif
 }
 
 .dimdayred textarea {
@@ -982,22 +1004,30 @@ a.tag:focus {
 .dimdayred.sheet .input--title {
     font-weight: bold;
     font-size: 18px;
-    font-family: "Metamorphous", serif
+    font-family: "dimdayred", serif
 }
 
-.dimdayred.sheet label,
-.dimdayred.sheet h1,
-.dimdayred.sheet h2 {
-    font-family: "Metamorphous", serif;
+
+
+.dimdayred.sheet h1 {
+    font-family: "dimdayred", serif;
     font-weight: bold;
-    border-color: inherit
+    border-color: inherit;
+    color: black;
 }
 
+.dimdayred.sheet h2 label {
+    font-family: "dimdayred", serif;
+    border-color: inherit;
+    color:#b18224;
+}
+
+.dimdayred.sheet h2,
 .dimdayred.sheet h3,
 .dimdayred.sheet h4,
 .dimdayred.sheet h5,
 .dimdayred.sheet h6 {
-    font-family: "Alegreya", serif;
+    font-family: "Calibri", serif;
     font-weight: bold
 }
 
@@ -1034,7 +1064,8 @@ a.tag:focus {
     order: 0;
     margin-bottom: 10px;
     max-height: 80px;
-    min-height: 50px
+    min-height: 50px;
+    /*background-color: #bb474a;*/
 }
 
 .dimdayred.sheet .sheet-wrapper .sheet-header input::-webkit-input-placeholder {
@@ -1174,6 +1205,7 @@ a.tag:focus {
     height: 100%
 }
 
+
 .dimdayred.sheet .cell__title,
 .dimdayred.sheet .cell__subtitle {
     display: -webkit-box;
@@ -1194,12 +1226,14 @@ a.tag:focus {
     -webkit-box-flex: 100%;
     -ms-flex: 100%;
     flex: 100%;
-    color: #2d3748;
+    color: #b18224;
     padding: 5px;
     margin-bottom: 5px;
-    font-weight: bold;
-    font-family: "Metamorphous", serif
+    font-family: "dimdayred", serif;
+    font-weight: normal;
 }
+
+
 
 .dimdayred.sheet .cell__title a,
 .dimdayred.sheet .cell__title button,
@@ -1212,7 +1246,7 @@ a.tag:focus {
 .dimdayred.sheet .cell__title button:focus,
 .dimdayred.sheet .cell__subtitle button:hover,
 .dimdayred.sheet .cell__subtitle button:focus {
-    background-color: #5b7094;
+    background-color: #bb474a;
     color: #fff
 }
 
@@ -1222,7 +1256,7 @@ a.tag:focus {
 .dimdayred.sheet .cell__subtitle.warning {
     background: #d68888;
     font-size: 16px;
-    font-family: "Alegreya", serif;
+    font-family: "Calibri", serif;
     font-weight: normal;
     -webkit-box-pack: center;
     -ms-flex-pack: center;
@@ -1282,19 +1316,21 @@ a.tag:focus {
 
 .dimdayred.sheet .tabs {
     border-bottom: 1px solid;
-    border-top: 0
+    border-top: 0;
+    font-size: 16px;
 }
 
 .dimdayred.sheet .tabs .item {
     border: 1px solid;
-    background: #bcc8de;
+    background: #ddd;
     border-radius: 4px 4px 0 0;
     margin: 0 5px -1px;
     padding: 4px;
     line-height: 1.4;
     -webkit-box-flex: 1;
     -ms-flex: 1;
-    flex: 1
+    flex: 1;
+    font-family: "dimdayred";
 }
 
 .dimdayred.sheet .tabs .item:hover,
@@ -1413,42 +1449,35 @@ a.tag:focus {
 }
 
 .dimdayred.sheet .sheet-header {
-    background: #2d3748;
+    /*background: #2d3748;*/
     color: #fff
 }
 
-.dimdayred.sheet .sheet-header h1,
-.dimdayred.sheet .sheet-header input {
-    color: #fff;
+.dimdayred.sheet .sheet-header h1 {
+    color: #000;
     -webkit-box-flex: 1;
     -ms-flex: 1;
     flex: 1;
     border: 0
 }
 
-.dimdayred.sheet .sheet-header h1 {
-    -webkit-box-flex: 2;
-    -ms-flex: 2;
-    flex: 2
-}
-
 .dimdayred.sheet .sheet-header input {
-    color: #fff;
-    border-bottom: 2px solid #5b7094;
+    /*color: #b18224;*/
+    font-weight: normal;
     margin: 0 10px;
-    font-size: 14px;
+    font-size: 30px;
     height: 32px;
     line-height: 32px;
     -webkit-box-flex: 100px;
     -ms-flex: 100px 2;
-    flex: 100px 2
+    flex: 100px 3;
+    font-family: "dimdayred";
 }
 
 .dimdayred.sheet .sheet-header input:hover,
 .dimdayred.sheet .sheet-header input:focus {
-    background: #5b7094;
-    -webkit-box-shadow: 0 0 8px #5b7094;
-    box-shadow: 0 0 8px #5b7094
+    -webkit-box-shadow: 0 0 8px #808081;
+    box-shadow: 0 0 8px #808081
 }
 
 .dimdayred.sheet .sheet-header .charclass {
@@ -1481,7 +1510,9 @@ a.tag:focus {
     -webkit-box-flex: 1;
     -ms-flex: 1;
     flex: 1;
-    font-size: 18px
+    font-size: 20px;
+    color: #000;
+    font-family: "DimdayRed", serif;
 }
 
 .dimdayred.sheet .sheet-header .flex-item input {
@@ -1491,30 +1522,31 @@ a.tag:focus {
     position: absolute;
     width: 36px;
     height: 36px;
-    border-radius: 50px;
     right: 0;
     top: 0;
     bottom: 0;
     margin: auto;
     text-align: center;
-    font-family: "Metamorphous", serif;
+    font-family: "DimdayRed", serif;
     font-size: 16px;
     line-height: 18px
 }
 
 .dimdayred.sheet .sheet-header .flex-item input:hover,
 .dimdayred.sheet .sheet-header .flex-item input:focus {
-    -webkit-box-shadow: 0 0 12px #5b7094;
-    box-shadow: 0 0 12px #5b7094;
-    border: 2px solid #5b7094
+    -webkit-box-shadow: 0 0 12px #bb474a;
+    box-shadow: 0 0 12px #bb474a;
+    border: 2px solid #bb474a
 }
 
 .dimdayred.sheet .sheet-header .flex-item.flex-item--xp {
-    position: relative
+    position: relative;
+    font-family: "DimdayRed", serif;
 }
 
 .dimdayred.sheet .sheet-header .flex-item.flex-item--xp input {
-    border: 2px solid #5b7094
+    border: 2px solid #808081;
+    border-radius: 25px;
 }
 
 .dimdayred.sheet .sheet-header .flex-item.flex-item--xp .progress-ring {
@@ -1524,7 +1556,7 @@ a.tag:focus {
 }
 
 .dimdayred.sheet .sheet-header .flex-item.flex-item--xp .progress-ring circle {
-    stroke: #41c179
+    stroke: #bb474a
 }
 
 .dimdayred.sheet .sheet-header .flex-item.flex-item--xp-button {
@@ -1535,7 +1567,8 @@ a.tag:focus {
     font-size: 22px;
     font-family: sans-serif;
     width: 32px;
-    line-height: 1
+    height: 32px;
+    line-height: 1;
 }
 
 .dimdayred.sheet .sheet-header .flex-item.flex-item--level-up {
@@ -1593,8 +1626,8 @@ a.tag:focus {
 .dimdayred.sheet .sheet-attributes,
 .dimdayred.sheet .sheet-resources {
     display: grid;
-    grid-column: span 16;
-    grid-template-columns: repeat(16, minmax(0, 1fr));
+    grid-column: span 12;
+    grid-template-columns: repeat(12, minmax(0, 1fr));
     gap: 0px 10px;
     margin: 0 0 10px 0;
     padding: 0
@@ -1633,7 +1666,8 @@ a.tag:focus {
 
 .dimdayred.sheet .sheet-attributes input,
 .dimdayred.sheet .sheet-resources input {
-    font-size: 18px
+    font-size: 18px;
+    font-family: "DimdayRed", serif;
 }
 
 .dimdayred.sheet .sheet-attributes .cell__title,
@@ -1665,7 +1699,8 @@ a.tag:focus {
 
 .dimdayred.sheet .sheet-attributes .cell--abilities,
 .dimdayred.sheet .sheet-resources .cell--abilities {
-    text-align: left
+    text-align: left;
+    padding-top: 10px;
 }
 
 .dimdayred.sheet .sheet-attributes .cell--abilities>.cell__title,
@@ -1694,15 +1729,14 @@ a.tag:focus {
     -webkit-box-flex: 100%;
     -ms-flex: 100%;
     flex: 100%;
-    background: #2d3748;
-    color: #fff;
+    font-size: 20px;
     padding: 5px;
     height: 34px
 }
 
 .dimdayred.sheet .sheet-attributes .cell .cell__title.rollable:hover,
 .dimdayred.sheet .sheet-resources .cell .cell__title.rollable:hover {
-    background: #5b7094;
+    background: #bb474a;
     cursor: pointer
 }
 
@@ -1722,39 +1756,9 @@ a.tag:focus {
     align-items: center;
     -webkit-box-pack: justify;
     -ms-flex-pack: justify;
-    justify-content: space-between
+    justify-content: space-between;
 }
 
-.dimdayred.sheet .sheet-attributes .cell--damage,
-.dimdayred.sheet .sheet-resources .cell--damage {
-    grid-column: span 4
-}
-
-.dimdayred.sheet .sheet-attributes .cell--damage .damage-inputs,
-.dimdayred.sheet .sheet-resources .cell--damage .damage-inputs {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: row;
-    flex-direction: row;
-    -ms-flex-wrap: nowrap;
-    flex-wrap: nowrap;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-    -webkit-box-pack: justify;
-    -ms-flex-pack: justify;
-    justify-content: space-between
-}
-
-.dimdayred.sheet .sheet-attributes .cell--damage select,
-.dimdayred.sheet .sheet-resources .cell--damage select {
-    -webkit-box-flex: 1;
-    -ms-flex: 1 1;
-    flex: 1 1
-}
 
 .dimdayred.sheet .sheet-attributes .cell--damage span,
 .dimdayred.sheet .sheet-resources .cell--damage span {
@@ -1763,22 +1767,23 @@ a.tag:focus {
 
 .dimdayred.sheet .sheet-attributes .cell--damage input,
 .dimdayred.sheet .sheet-resources .cell--damage input {
-    -webkit-box-flex: 1;
+    -webkit-box-flex: 1; 
     -ms-flex: 1 1;
     flex: 1 1
 }
 
 .dimdayred.sheet .sheet-attributes .cell--ac,
-.dimdayred.sheet .sheet-attributes .cell--mac,
-.dimdayred.sheet .sheet-attributes .cell--weight,
+.dimdayred.sheet .sheet-attributes .cell--hr,
 .dimdayred.sheet .sheet-resources .cell--ac,
-.dimdayred.sheet .sheet-resources .cell--mac,
-.dimdayred.sheet .sheet-resources .cell--weight {
+.dimdayred.sheet .sheet-resources .cell--hr {
     grid-column: span 3
 }
 
 .dimdayred.sheet .sheet-attributes .hp--max,
-.dimdayred.sheet .sheet-resources .hp--max {
+.dimdayred.sheet .sheet-resources .hp--max,
+.dimdayred.sheet .sheet-attributes .heat--max,
+.dimdayred.sheet .sheet-resources .heat--max {
+    background-color: #037307;
     width: 65%
 }
 
@@ -1790,7 +1795,6 @@ a.tag:focus {
 .dimdayred.sheet .sheet-attributes .cell--hp input,
 .dimdayred.sheet .sheet-resources .cell--hp input {
     background-color: #fff;
-    margin: 0
 }
 
 .dimdayred.sheet .sheet-attributes .cell--hp .cell__wrapper,
@@ -1812,34 +1816,39 @@ a.tag:focus {
     border: 1px solid #bcc8de
 }
 
+
 .dimdayred.sheet .sheet-attributes .cell--hp .resource-decrease,
-.dimdayred.sheet .sheet-resources .cell--hp .resource-decrease {
-    left: 2.5px
+.dimdayred.sheet .sheet-resources .cell--hp .resource-decrease,
+.dimdayred.sheet .sheet-attributes .cell--heat .resource-decrease,
+.dimdayred.sheet .sheet-resources .cell--heat .resource-decrease {
+    left: 5px
 }
 
 .dimdayred.sheet .sheet-attributes .cell--hp .resource-increase,
-.dimdayred.sheet .sheet-resources .cell--hp .resource-increase {
-    right: 2.5px
+.dimdayred.sheet .sheet-resources .cell--hp .resource-increase,
+.dimdayred.sheet .sheet-attributes .cell--heat .resource-increase,
+.dimdayred.sheet .sheet-resources .cell--heat .resource-increase {
+    right: 5px
 }
 
-.dimdayred.sheet .sheet-attributes .cell--coin,
-.dimdayred.sheet .sheet-resources .cell--coin {
+
+.dimdayred.sheet .sheet-attributes .cell--heat,
+.dimdayred.sheet .sheet-resources .cell--heat {
     grid-column: span 3
 }
 
-.dimdayred.sheet .sheet-attributes .cell--coin input,
-.dimdayred.sheet .sheet-resources .cell--coin input {
+.dimdayred.sheet .sheet-attributes .cell--heat input,
+.dimdayred.sheet .sheet-resources .cell--heat input {
     background-color: #fff;
-    margin: 0
 }
 
-.dimdayred.sheet .sheet-attributes .cell--coin .cell__wrapper,
-.dimdayred.sheet .sheet-resources .cell--coin .cell__wrapper {
+.dimdayred.sheet .sheet-attributes .cell--heat .cell__wrapper,
+.dimdayred.sheet .sheet-resources .cell--heat .cell__wrapper {
     position: relative
 }
 
-.dimdayred.sheet .sheet-attributes .cell--coin .resource-control,
-.dimdayred.sheet .sheet-resources .cell--coin .resource-control {
+.dimdayred.sheet .sheet-attributes .cell--heat .resource-control,
+.dimdayred.sheet .sheet-resources .cell--heat .resource-control {
     position: absolute;
     top: -4px;
     bottom: 0;
@@ -1852,16 +1861,6 @@ a.tag:focus {
     border: 1px solid #bcc8de
 }
 
-.dimdayred.sheet .sheet-attributes .cell--coin .resource-decrease,
-.dimdayred.sheet .sheet-resources .cell--coin .resource-decrease {
-    left: 5px
-}
-
-.dimdayred.sheet .sheet-attributes .cell--coin .resource-increase,
-.dimdayred.sheet .sheet-resources .cell--coin .resource-increase {
-    right: 5px
-}
-
 .dimdayred.sheet .sheet-attributes .cell--ongoing,
 .dimdayred.sheet .sheet-attributes .cell--forward,
 .dimdayred.sheet .sheet-attributes .cell--hold,
@@ -1872,7 +1871,7 @@ a.tag:focus {
 .dimdayred.sheet .sheet-resources .cell--hold,
 .dimdayred.sheet .sheet-resources .cell--resource1,
 .dimdayred.sheet .sheet-resources .cell--roll-formula {
-    grid-column: span 3
+    grid-column: span 3;
 }
 
 .dimdayred.sheet .sheet-attributes .cell--ongoing input,
@@ -2031,7 +2030,7 @@ a.tag:focus {
 .dimdayred.sheet .cell--abilities .abilities-list {
     display: grid;
     grid-column: span 3/span 3;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 0px 10px;
     margin: 10px 0;
     padding: 0
@@ -2054,14 +2053,17 @@ a.tag:focus {
     -webkit-box-flex: 100%;
     -ms-flex: 100%;
     flex: 100%;
-    background: #2d3748;
+    background: #000;
     color: #fff;
     padding: 5px;
-    border-radius: 0 50px 0 0
+    padding-left: 70px;
+    border-radius: 0px 50px 50px 0;
+    font-size:24px;
+    font-weight: normal;
 }
 
 .dimdayred.sheet .cell--abilities .ability .rollable:hover {
-    background: #5b7094;
+    background: #bb474a;
     cursor: pointer
 }
 
@@ -2071,23 +2073,24 @@ a.tag:focus {
     flex: 32px;
     -webkit-box-flex: 0;
     -ms-flex-positive: 0;
-    flex-grow: 0
+    flex-grow: 0;
 }
 
 .dimdayred.sheet .cell--abilities .ability .ability-mod {
     position: absolute;
-    top: -23px;
-    right: -2px;
+    top: -43px;
+    right: 0px;
     bottom: 0;
     margin: auto;
     width: 50px;
     height: 50px;
     text-align: center;
-    border: 2px solid #2d3748;
-    border-radius: 50px;
+    /*border: 2px solid #000;*/
+    /*border-radius: 50px;*/
     line-height: 38px;
     font-size: 24px;
-    background: #fff;
+    /*background: #fff;*/
+    background-color: transparent;
     color: #2d3748;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -2097,7 +2100,11 @@ a.tag:focus {
     align-items: center;
     -webkit-box-pack: center;
     -ms-flex-pack: center;
-    justify-content: center
+    justify-content: center;
+    font-size: 22px;
+    height: 55px;
+    /* rotate:45deg; */
+    background-image: url("../../assets/icons/drr-dice.png");
 }
 
 .dimdayred.sheet .cell--abilities .ability .ability-debility {
@@ -2112,9 +2119,11 @@ a.tag:focus {
     flex-wrap: nowrap;
     -webkit-box-align: center;
     -ms-flex-align: center;
-    align-items: center;
+    /*align-items: center;*/
     margin: 0 8px 8px;
-    font-size: 10px
+    font-size: 14px;
+    font-family: "dimdayred";
+    /*font-weight: bold;*/
 }
 
 .dimdayred.sheet .cell--abilities .ability .ability-debility input {
@@ -2180,7 +2189,7 @@ a.tag:focus {
 .dimdayred.sheet .cell--other-moves .items-list .item,
 .dimdayred.sheet .cell--equipment .items-list .item,
 .dimdayred.sheet .cell--spells .items-list .item {
-    padding: 10px 0
+    padding: 5px 0
 }
 
 .dimdayred.sheet .cell--moves .item-controls,
@@ -2336,7 +2345,7 @@ a.tag:focus {
     background: #000;
     color: #fff;
     opacity: 0;
-    font-size: 14px
+    font-size: 16px
 }
 
 .dimdayred.sheet .cell--moves .item-avatar .rollable:hover,
@@ -2433,8 +2442,13 @@ a.tag:focus {
     flex: 0 auto
 }
 
+.dimdayred.sheet .cell--basic-moves .item-label {
+    font-family: "dimdayred";
+    font-weight: normal;
+}
+
+
 .dimdayred.sheet .cell--moves .item-label,
-.dimdayred.sheet .cell--basic-moves .item-label,
 .dimdayred.sheet .cell--starting-moves .item-label,
 .dimdayred.sheet .cell--advanced-moves .item-label,
 .dimdayred.sheet .cell--special-moves .item-label,
@@ -2442,7 +2456,9 @@ a.tag:focus {
 .dimdayred.sheet .cell--equipment .item-label,
 .dimdayred.sheet .cell--spells .item-label {
     border-left: 2px solid;
-    padding-left: 4px
+    padding-left: 4px;
+    font-family: "dimdayred";
+    font-weight: normal;
 }
 
 .dimdayred.sheet .cell--moves .item-label::after,
@@ -2556,7 +2572,7 @@ a.tag:focus {
 .dimdayred.sheet .cell--equipment .rollable:focus,
 .dimdayred.sheet .cell--spells .rollable:hover,
 .dimdayred.sheet .cell--spells .rollable:focus {
-    color: #5b7094;
+    color: #bb474a;
     text-shadow: 0 0 5px rgba(91, 112, 148, .25);
     cursor: pointer
 }
@@ -2566,7 +2582,7 @@ a.tag:focus {
 }
 
 .dimdayred.sheet .sheet-look .cell__title {
-    font-size: 14px;
+    font-size: 16px;
     margin: 20px 0 0;
     border-bottom: 1px solid
 }
@@ -2584,7 +2600,8 @@ a.tag:focus {
 }
 
 .dimdayred.sheet .cell--bonds .item {
-    margin-bottom: 4px
+    margin-bottom: 4px;
+    margin-left:25px;
 }
 
 .dimdayred.sheet .cell--bonds .flexrow {
@@ -2753,15 +2770,15 @@ a.tag:focus {
 
 .dimdayred.sheet.dw-level-up h1,
 .dimdayred.sheet.dw-level-up h2 {
-    font-size: 18px
+    font-size: 24px
 }
 
 .dimdayred.sheet.dw-level-up h3 {
-    font-size: 16px
+    font-size: 20px
 }
 
 .dimdayred.sheet.dw-level-up h4 {
-    font-size: 14px
+    font-size: 18px
 }
 
 .dimdayred.sheet.dw-level-up .flexrow.center .cell__title {
@@ -2851,7 +2868,7 @@ a.tag:focus {
 
 .dimdayred.sheet .class .cell__title input[type=text] {
     color: #fff;
-    font-family: "Metamorphous", serif
+    font-family: "DimdayRed", serif
 }
 
 .dimdayred.sheet .class .cell__title label {
@@ -2967,7 +2984,7 @@ a.tag:focus {
 }
 
 .window-app.nightmode .window-content .sheet-header {
-    background: #344460 !important
+    background: #1d1d1b !important
 }
 
 .window-app.nightmode .window-content .sheet-header input[type=text],
@@ -2980,7 +2997,7 @@ a.tag:focus {
 }
 
 .window-app.nightmode .window-content .sheet-attributes .cell__title {
-    background: #344460 !important
+    background: #bb474a !important
 }
 
 .window-app.nightmode .window-content .sheet-attributes .cell__title.rollable:hover {
@@ -3001,7 +3018,7 @@ a.tag:focus {
 
 .window-app.nightmode .window-content .level-up .cell__subtitle {
     color: #fff !important;
-    background-color: #344460
+    background-color: red;
 }
 
 .window-app.nightmode .window-content button,
@@ -3108,3 +3125,49 @@ a.tag:focus {
     --tag-remove-btn-bg--hover: #c77777;
     --placeholder-color: #ddd
 }
+
+.sheet.journal-entry .journal-entry-page :is(h1) {
+    font-family: "DimdayRed", serif;
+    background-color: #bb474a;
+    color: white;
+    border-bottom: none;
+    padding-top: 3px;
+    padding-left: 10px;
+}
+
+
+.sheet.journal-entry .journal-entry-page :is(h2) {
+    font-family: "DimdayRed", serif;
+    border-bottom: 2px solid #000;
+    padding-top: 3px;
+    padding-left: 3px;
+}
+
+.sheet.journal-entry .journal-entry-page :is(h3, h4, h5, h6) {
+    font-family: "DimdayRed", serif;
+    border-bottom: none;
+    padding-top: 3px;
+    padding-left: 3px;
+}
+
+.sheet.journal-entry .journal-header .title { 
+    font-family: "DimdayRed", serif;
+}
+
+/*.sheet.journal-entry .journal-entry-page * {
+    font-family: "Roboto";
+}
+*/
+
+.sheet.journal-entry .journal-entry-content {
+    background: url(../../assets/background.png) repeat;
+}
+
+
+.sheet header.sheet-header .moribus-img {
+    flex: 0 0 64px;
+    height: 410px;
+    margin-right: 6px;
+
+}
+

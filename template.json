@@ -8,11 +8,26 @@
       "base": {
         "attributes": {
           "hp": {
-            "value": 10,
+            "value": 7,
             "min": 0,
-            "max": 10
+            "max": 7
           },
           "ac": {
+            "value": 0,
+            "base": 0,
+            "min": 0
+          },
+          "mac": {
+            "value": 0,
+            "base": 0,
+            "min": 0
+          },
+          "heat": {
+            "value": 7,
+            "min": 0,
+            "max": 7
+          },
+          "heatres": {
             "value": 0,
             "base": 0,
             "min": 0
@@ -43,10 +58,6 @@
         "base"
       ],
       "attributes": {
-        "weight": {
-          "value": 0,
-          "max": 1
-        },
         "coin": {
           "value": 0
         },
@@ -56,10 +67,34 @@
         "forward": {
           "value": 0
         },
+        "forwardstr": {
+          "value": 0
+        },
+        "forwardint": {
+          "value": 0
+        },
+        "forwardwis": {
+          "value": 0
+        },
+        "forwardcha": {
+          "value": 0
+        },
         "hold": {
           "value": 0
         },
         "ongoing": {
+          "value": 0
+        },
+        "ongoingstr": {
+          "value": 0
+        },
+        "ongoingint": {
+          "value": 0
+        },
+        "ongoingwis": {
+          "value": 0
+        },
+        "ongoingcha": {
           "value": 0
         },
         "resource1": {
@@ -70,41 +105,35 @@
       },
       "abilities": {
         "str": {
-          "value": 10,
-          "min": 3,
-          "mod": 0,
-          "debility": false
-        },
-        "dex": {
-          "value": 10,
-          "min": 3,
-          "mod": 0,
-          "debility": false
-        },
-        "con": {
-          "value": 10,
-          "min": 3,
+          "value": 0,
+          "base": 0,
           "mod": 0,
           "debility": false
         },
         "int": {
-          "value": 10,
-          "min": 3,
+          "value": 0,
+          "base": 0,
           "mod": 0,
           "debility": false
         },
         "wis": {
-          "value": 10,
-          "min": 3,
+          "value": 0,
+          "base": 0,
           "mod": 0,
           "debility": false
         },
         "cha": {
-          "value": 10,
-          "min": 3,
+          "value": 0,
+          "base": 0,
           "mod": 0,
           "debility": false
         }
+      },
+      "heat": {
+        "min": 0,
+        "value": [1],
+        "max": 7,
+        "states": [true, false, false, false, false, false, false]
       },
       "details": {
         "alignment": {
@@ -220,7 +249,7 @@
       "races": {},
       "alignments": {},
       "equipment": {},
-      "hp": 10,
+      "hp": 7,
       "load": 6,
       "damage": "d6"
     }
