@@ -1,11 +1,12 @@
 {
+  "id": "dimdayred",
   "title": "DIMDAY_RED",
-  "description": "The DIMDAY_RED system for FoundryVTT!",
+  "description": "The DIMDAY_RED system for FoundryVTT",
   "version": "0.2",
   "compatibility": {
-    "minimum": "11",
+    "minimum": 11,
     "verified": "11.315",
-    "maximum": "12"
+    "maximum": 12
   },
   "authors": [
     {
@@ -175,6 +176,5 @@
   "manifest": "https://github.com/fchrysoulas/DIMDAY_RED/blob/main/system.json",
   "download": "https://github.com/fchrysoulas/DIMDAY_RED/archive/refs/tags/v0.2.0.zip",
   "changelog": "",
-  "bugs": "",
-  "id": "dimdayred"
+  "bugs": ""
 }
