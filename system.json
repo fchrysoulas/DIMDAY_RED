@@ -1,7 +1,7 @@
 {
   "title": "DIMDAY_RED",
   "description": "The DIMDAY_RED system for FoundryVTT!",
-  "version": "0.1",
+  "version": "0.2",
   "compatibility": {
     "minimum": "11",
     "verified": "11.315",
