@@ -171,9 +171,9 @@
   "secondaryTokenAttribute": "attributes.heat",
   "initiative": "1d20",
   "socket": true,
-  "url": "",
-  "manifest": "",
-  "download": "",
+  "url": "https://github.com/fchrysoulas/DIMDAY_RED/blob/main/system.json",
+  "manifest": "https://github.com/fchrysoulas/DIMDAY_RED",
+  "download": "https://github.com/fchrysoulas/DIMDAY_RED/archive/refs/tags/v0.2.0.zip",
   "changelog": "",
   "bugs": "",
   "id": "dimdayred"
