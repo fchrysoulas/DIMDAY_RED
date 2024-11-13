@@ -7,9 +7,7 @@
           <div class="sheet-header__fields">
               <input class="input--title" name="name" type="text" value="{{actor.name}}" placeholder="Name"/>
              
-              <!-- <input class="input--title" name="class" type="text" value="{{actor.class}}" placeholder="Class"  />
-         
-              -->
+              <!--<input class="input--title" name="class" type="text" value="{{actor.class}}" placeholder="Class"  />-->
 
               <div class="flex-item flex-item--level">
                 <label>Level</label>
@@ -102,6 +100,27 @@
         {{!-- Attributes --}}
         <section class="sheet-attributes">
 
+         
+         
+          <div class="cell cell--abilities">
+            <ol class="abilities-list">
+       
+            {{#each system.abilities as |ability key|}}
+                <li class="ability flexrow" data-ability="{{key}}">
+                    <label class="cell__title ability-rollable rollable" data-roll="{{key}}" data-label="{{ability.label}}">{{ localize ability.label }}</label>
+                    {{#if ../system.noAbilityScores}}
+                      <input class="ability-mod" type="text" name="system.abilities.{{key}}.value" value="{{#if ability.value}}{{numberFormat ability.value decimals=0 sign=true}}{{else}}0{{/if}}" data-dtype="Number"/>
+                    {{else}}
+                      <input class="ability-value" type="text" name="system.abilities.{{key}}.value" value="{{ability.value}}" data-dtype="Number"/>
+                      <span class="ability-mod">{{numberFormat ability.mod decimals=0 sign=true}}</span>
+                    {{/if}}
+                    <label class="ability-debility checkbox"><input type="checkbox" name="system.abilities.{{key}}.debility" {{checked ability.debility}}/>{{ ability.debilityLabel }}</label>
+                </li>
+            {{/each}}
+            
+            </ol>
+          </div>
+
           <div class="cell cell--ac">
             <label class="cell__title">Armor<i class="fas fa-shield-alt attribute-icon"></i></label>
             <div class="cell__counter">
@@ -140,44 +159,6 @@
               <span> / </span>
               <input type="text" class="heat--max" name="system.attributes.heat.max" value="{{system.attributes.heat.max}}" data-dtype="Number"/>
             </div>
-          </div>
-         
-          <div class="cell cell--abilities">
-            <ol class="abilities-list">
-       
-            {{#each system.abilities as |ability key|}}
-                <li class="ability flexrow" data-ability="{{key}}">
-                    <label class="cell__title ability-rollable rollable" data-roll="{{key}}" data-label="{{ability.label}}">{{ localize ability.label }}</label>
-                    {{#if ../system.noAbilityScores}}
-                      <input class="ability-mod" type="text" name="system.abilities.{{key}}.value" value="{{#if ability.value}}{{numberFormat ability.value decimals=0 sign=true}}{{else}}0{{/if}}" data-dtype="Number"/>
-                    {{else}}
-                      <input class="ability-value" type="text" name="system.abilities.{{key}}.value" value="{{ability.value}}" data-dtype="Number"/>
-                      <span class="ability-mod">{{numberFormat ability.mod decimals=0 sign=true}}</span>
-                    {{/if}}
-                <!--
-                    <div class="cell cell--forward">
-                      <label class="cell">{{localize "DW.Forward"}}</label>
-                      <div class="cell__wrapper">
-                        <button  type="button" class="resource-control resource-decrease" data-action="decrease" data-attr="attributes.forwardstr.value">-</button>
-                        <input type="number" name="system.attributes.forwardstr.value" value="{{attributes.forwardstr.value}}" data-dtype="Number"/>
-                        <button  type="button" class="resource-control resource-increase" data-action="increase" data-attr="attributes.forwardstr.value">+</button>
-                      </div>
-                    </div>
-
-                    <div class="cell cell--ongoing">
-                      <label class="cell">{{localize "DW.Ongoing"}}</label>
-                      <div class="cell__wrapper">
-                        <button  type="button" class="resource-control resource-decrease" data-action="decrease" data-attr="attributes.ongoing{{key}}.value">-</button>
-                        <input type="number" name="system.attributes.ongoing{{key}}.value" value="{{ability.value}}" data-dtype="Number"/>
-                        <button  type="button" class="resource-control resource-increase" data-action="increase" data-attr="attributes.ongoing{{key}}.value">+</button>
-                      </div>
-                    </div>
-                  -->
-                    <label class="ability-debility checkbox"><input type="checkbox" name="system.abilities.{{key}}.debility" {{checked ability.debility}}/>{{ ability.debilityLabel }}</label>
-                </li>
-            {{/each}}
-            
-            </ol>
           </div>
 
         </section>

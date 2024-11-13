@@ -2,16 +2,17 @@
   "id": "dimdayred",
   "title": "DIMDAY_RED",
   "description": "The DIMDAY_RED system for FoundryVTT",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "compatibility": {
     "minimum": 11,
-    "verified": "11.315"
+    "verified": "11.315",
+    "maximum": 12
   },
   "authors": [
     {
-      "name": "Mikrokouneli",
+      "name": "mikrokouneli",
       "url": "https://github.com/fchrysoulas",
-      "discord": "Mikrokouneli"
+      "discord": "mikrokouneli"
     }
   ],
   "esmodules": ["module/dimdayred.js"],
@@ -60,10 +61,10 @@
       "flags": {}
     },
     {
-      "name": "equipment-armor",
-      "label": "Equipment (Armor)",
+      "name": "tenets",
+      "label": "Tenets",
       "system": "dimdayred",
-      "path": "packs/equipment-armor",
+      "path": "packs/tenets",
       "type": "Item",
       "ownership": {
         "PLAYER": "OBSERVER",
@@ -120,10 +121,10 @@
       "flags": {}
     },
     {
-      "label": "GM Moves/Principals",
+      "label": "Quickstart",
       "type": "JournalEntry",
-      "name": "gm-movesprincipals",
-      "path": "packs/gm-movesprincipals",
+      "name": "quickstart",
+      "path": "packs/quickstart",
       "system": "dimdayred",
       "ownership": {
         "PLAYER": "OBSERVER",
@@ -156,6 +157,23 @@
       "flags": {}
     }
   ],
+  "packFolders": [
+		{
+			"name": "Dimday Red System",
+			"sorting": "a",
+			"color": "#bb474a",
+			"packs": [
+				"classes",
+				"basic-moves",
+				"quickstart",
+				"moribus",
+				"equipment-gear",
+				"equipment-class",
+				"tenets",
+				"tags"
+			]
+		}
+	],
   "languages": [
     {
       "lang": "en",
@@ -168,5 +186,5 @@
   "secondaryTokenAttribute": "attributes.heat",
   "url": "https://github.com/fchrysoulas/DIMDAY_RED",
   "manifest": "https://github.com/fchrysoulas/DIMDAY_RED/blob/main/system.json",
-  "download": "https://github.com/fchrysoulas/DIMDAY_RED/archive/refs/tags/v0.2.1.zip"
+  "download": "https://github.com/fchrysoulas/DIMDAY_RED/archive/refs/tags/v0.2.2.zip"
 }

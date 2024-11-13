@@ -1,8 +1,8 @@
-2024/11/12-17:39:05.331148 ffff7effd160 Recovering log #212
-2024/11/12-17:39:05.338093 ffff7effd160 Delete type=0 #212
-2024/11/12-17:39:05.338253 ffff7effd160 Delete type=3 #210
-2024/11/12-17:58:47.900983 ffff7dffb160 Level-0 table #217: started
-2024/11/12-17:58:47.901083 ffff7dffb160 Level-0 table #217: 0 bytes OK
-2024/11/12-17:58:47.903815 ffff7dffb160 Delete type=0 #215
-2024/11/12-17:58:47.913151 ffff7dffb160 Manual compaction at level-0 from '!tables!Py2sjW7zwW8S7q15' @ 72057594037927935 : 1 .. '!tables.results!Py2sjW7zwW8S7q15.zOQCPro6v1zuAOE0' @ 0 : 0; will stop at (end)
-2024/11/12-17:58:47.916363 ffff7dffb160 Manual compaction at level-1 from '!tables!Py2sjW7zwW8S7q15' @ 72057594037927935 : 1 .. '!tables.results!Py2sjW7zwW8S7q15.zOQCPro6v1zuAOE0' @ 0 : 0; will stop at (end)
+2024/11/13-00:15:00.957720 ffff7e7fc160 Recovering log #262
+2024/11/13-00:15:00.964069 ffff7e7fc160 Delete type=0 #262
+2024/11/13-00:15:00.964271 ffff7e7fc160 Delete type=3 #260
+2024/11/13-00:16:01.564537 ffff7dffb160 Level-0 table #267: started
+2024/11/13-00:16:01.564631 ffff7dffb160 Level-0 table #267: 0 bytes OK
+2024/11/13-00:16:01.567041 ffff7dffb160 Delete type=0 #265
+2024/11/13-00:16:01.570517 ffff7dffb160 Manual compaction at level-0 from '!tables!Py2sjW7zwW8S7q15' @ 72057594037927935 : 1 .. '!tables.results!Py2sjW7zwW8S7q15.zUVhJlc97koMQKZR' @ 0 : 0; will stop at (end)
+2024/11/13-00:16:01.574787 ffff7dffb160 Manual compaction at level-1 from '!tables!Py2sjW7zwW8S7q15' @ 72057594037927935 : 1 .. '!tables.results!Py2sjW7zwW8S7q15.zUVhJlc97koMQKZR' @ 0 : 0; will stop at (end)

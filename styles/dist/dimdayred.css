@@ -282,7 +282,7 @@ a.tag:focus {
 .vtt .window-app a:focus,
 .vtt .window-app.filepicker .file-directory>li:hover,
 .vtt .window-app.filepicker .file-directory>li:focus {
-    color: #1d1d1b;
+    color: #bb474a;
     text-shadow: 0 0 5px rgba(91, 112, 148, .25)
 }
 
@@ -983,10 +983,8 @@ a.tag:focus {
 .dimdayred.actor .window-content {
     position: relative;
     background: #fff;
-    background-image: -webkit-gradient(linear, left top, left bottom, from(#dedede), to(#dedede)), url("../../assets/heath-alseike-vector-edge.svg");
-    background-image: linear-gradient(#dedede, #dedede), url("../../assets/heath-alseike-vector-edge.svg");
-    background-repeat: no-repeat;
-    background-size: 100% 264px, 100%;
+    background: url(../../assets/background.png) repeat;
+    background-size: 200%;
     background-position: 0 0, 0 262px;
     background-attachment: local
 }
@@ -1119,7 +1117,7 @@ a.tag:focus {
     -webkit-box-align: stretch;
     -ms-flex-align: stretch;
     align-items: stretch;
-    height: calc(100% - 80px)
+    height: calc(100% - 80px);
 }
 
 .dimdayred.sheet .sheet-wrapper .sheet-look .cell--aesthetics {
@@ -1462,9 +1460,10 @@ a.tag:focus {
 }
 
 .dimdayred.sheet .sheet-header input {
-    /*color: #b18224;*/
+    color: #fff;
+    background-color: #bb474a;
     font-weight: normal;
-    margin: 0 10px;
+    padding: 0 10px;
     font-size: 30px;
     height: 32px;
     line-height: 32px;
@@ -1620,7 +1619,8 @@ a.tag:focus {
     flex-wrap: nowrap;
     -webkit-box-align: center;
     -ms-flex-align: center;
-    align-items: center
+    align-items: center;
+    /*background-color: #bb474a;*/
 }
 
 .dimdayred.sheet .sheet-attributes,
@@ -1630,7 +1630,7 @@ a.tag:focus {
     grid-template-columns: repeat(12, minmax(0, 1fr));
     gap: 0px 10px;
     margin: 0 0 10px 0;
-    padding: 0
+    padding: 0;
 }
 
 .dimdayred.sheet .sheet-attributes .cell,
@@ -1700,7 +1700,6 @@ a.tag:focus {
 .dimdayred.sheet .sheet-attributes .cell--abilities,
 .dimdayred.sheet .sheet-resources .cell--abilities {
     text-align: left;
-    padding-top: 10px;
 }
 
 .dimdayred.sheet .sheet-attributes .cell--abilities>.cell__title,
@@ -1731,7 +1730,8 @@ a.tag:focus {
     flex: 100%;
     font-size: 20px;
     padding: 5px;
-    height: 34px
+    height: 34px;
+    border-bottom: 1px rgba(0, 0, 0, .3) solid;
 }
 
 .dimdayred.sheet .sheet-attributes .cell .cell__title.rollable:hover,
@@ -2056,7 +2056,8 @@ a.tag:focus {
     background: #000;
     color: #fff;
     padding: 5px;
-    padding-left: 70px;
+    padding-left: 12px;
+    padding-right: 60px;
     border-radius: 0px 50px 50px 0;
     font-size:24px;
     font-weight: normal;
@@ -2139,7 +2140,8 @@ a.tag:focus {
     -ms-flex-direction: column;
     flex-direction: column;
     margin: 10px 0;
-    padding: 0
+    padding: 0;
+    background-color: rgba(255, 255, 255, 0.685);
 }
 
 .dimdayred.sheet .sheet-tab .cell--abilities {
@@ -2584,7 +2586,8 @@ a.tag:focus {
 .dimdayred.sheet .sheet-look .cell__title {
     font-size: 16px;
     margin: 20px 0 0;
-    border-bottom: 1px solid
+    border-bottom: 1px solid;
+    color: #b18224;
 }
 
 .dimdayred.sheet .sheet-look .cell--image {
