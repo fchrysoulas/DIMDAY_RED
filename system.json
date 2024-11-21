@@ -2,7 +2,7 @@
   "id": "dimdayred",
   "title": "DIMDAY_RED",
   "description": "The DIMDAY_RED system for FoundryVTT",
-  "version": "0.2.2",
+  "version": "0.1.0",
   "compatibility": {
     "minimum": 11,
     "verified": "11.315",
@@ -186,5 +186,5 @@
   "secondaryTokenAttribute": "attributes.heat",
   "url": "https://github.com/fchrysoulas/DIMDAY_RED",
   "manifest": "https://github.com/fchrysoulas/DIMDAY_RED/blob/main/system.json",
-  "download": "https://github.com/fchrysoulas/DIMDAY_RED/archive/refs/tags/v0.2.2.zip"
+  "download": "https://github.com/fchrysoulas/DIMDAY_RED/archive/refs/tags/v0.2.0.zip"
 }
